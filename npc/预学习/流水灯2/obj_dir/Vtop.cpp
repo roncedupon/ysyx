@@ -89,7 +89,7 @@ VL_INLINE_OPT void Vtop::_sequent__TOP__1(Vtop__Syms* __restrict vlSymsp) {
                                                   & ((IData)(vlTOPp->led) 
                                                      >> 0xfU)));
         }
-        __Vdly__top__DOT__count = ((0x4c4b40U <= vlTOPp->top__DOT__count)
+        __Vdly__top__DOT__count = ((0x1f4U <= vlTOPp->top__DOT__count)
                                     ? 0U : ((IData)(1U) 
                                             + vlTOPp->top__DOT__count));
     }
