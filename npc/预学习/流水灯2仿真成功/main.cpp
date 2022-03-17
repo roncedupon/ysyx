@@ -1,5 +1,6 @@
 #include "verilated_vcd_c.h"
 #include "Vtop.h"
+//#include <nvboard.h>
 //top的信号
 /*
 input clk,
@@ -8,7 +9,10 @@ output reg [15:0] led
 */
 double sc_time_stamp() { return 0; }
 int main(int argc, char** argv, char** env) {
-    
+    // nvboard_bind_all_pins(&dut);
+    // nvboard_init();
+
+
 // Prevent unused variable warnings
     if (false && argc && argv && env) {}
     const std::unique_ptr<VerilatedContext> contextp{new VerilatedContext};
@@ -26,13 +30,14 @@ int main(int argc, char** argv, char** env) {
     VerilatedVcdC* tfp = new VerilatedVcdC;
     top->trace(tfp, 0);
     tfp->open("wave.vcd");
-
-    while (!contextp->gotFinish()&&contextp->time()<10000) {
+ 
+    while (!contextp->gotFinish()&&contextp->time()<10000000) {
+        if((contextp->time())%1000==1)top->clk = !top->clk;
        contextp->timeInc(1);
-       top->clk = !top->clk;
+       
        if (!top->clk) {
             if (contextp->time() > 1 && contextp->time() < 10) {
-                top->rst = !0;  // 前10秒复位
+                top->rst = !0;  // 复位10单位
             } else {
                 top->rst = !1;  // Deassert reset
             }
@@ -45,7 +50,11 @@ int main(int argc, char** argv, char** env) {
         //printf("%d\n",top->led[1])
         // VL_PRINTF("clk=%x ,rstl=%x , owide=%x\n",
         //            top->clk, top->rst, top->led[0]);
+
+
+        //nvboard_update();
      }
+    //nvboard_quit();
     top->final();
 
     return 0;
