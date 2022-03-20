@@ -11,7 +11,7 @@ void init_wp_pool();
 
 /* We use the `readline' library to provide more flexibility to read from stdin. */
 static char* rl_gets() {
-  static char *line_read = NULL;
+  static char *line_read = NULL;//静态的,一直保留在函数里
 
   if (line_read) {
     free(line_read);
@@ -31,10 +31,23 @@ static int cmd_c(char *args) {
   cpu_exec(-1);
   return 0;
 }
-
+static int cmd_si(char *args){
+  char *arg_to_deal = strtok(args," ");//将args按空格分开,并且把args第一个给arg_to_deal
+  if(arg_to_deal==NULL){
+    cpu_exec(1);
+    printf("默认执行一步\n");
+    return 0;
+  }
+  else{
+    int num = atoi(arg_to_deal);
+    cpu_exec(num);
+    printf("OK");
+    return 0;
+  }    
+}
 
 static int cmd_q(char *args) {
-  return -1;
+  return -1;//这里没问题--cmd_q一直返回的是-1
 }
 
 static int cmd_help(char *args);
@@ -47,12 +60,13 @@ static struct {
   { "help", "Display informations about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
+  {"si","单步调试",cmd_si},
 
   /* TODO: Add more commands */
 
 };
 
-#define NR_CMD ARRLEN(cmd_table)
+#define NR_CMD ARRLEN(cmd_table)//cmd_table的地址长度
 
 static int cmd_help(char *args) {
   /* extract the first argument */
@@ -91,7 +105,7 @@ void sdb_mainloop() {
     char *str_end = str + strlen(str);
 
     /* extract the first token as the command */
-    char *cmd = strtok(str, " ");
+    char *cmd = strtok(str, " ");// char *strtok(char *str, const char *delim) 分解字符串 str 为一组字符串，delim 为分隔符。
     if (cmd == NULL) { continue; }
 
     /* treat the remaining string as the arguments,
@@ -110,8 +124,8 @@ void sdb_mainloop() {
     int i;
     for (i = 0; i < NR_CMD; i ++) {
       if (strcmp(cmd, cmd_table[i].name) == 0) {
-        if (cmd_table[i].handler(args) < 0) { return; }
-        break;
+        if (cmd_table[i].handler(args) < 0) { return; }//q的话永远返回-1---就能直接return
+        break;//如果不return,就说明命令无效
       }
     }
 

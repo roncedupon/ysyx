@@ -6,7 +6,7 @@
 // ----------- state -----------
 
 enum { NEMU_RUNNING, NEMU_STOP, NEMU_END, NEMU_ABORT, NEMU_QUIT };
-
+//状态:运行中,Nemu停止状态,Nemu结束状态,NEMU_ABORT是啥?
 typedef struct {
   int state;
   vaddr_t halt_pc;
