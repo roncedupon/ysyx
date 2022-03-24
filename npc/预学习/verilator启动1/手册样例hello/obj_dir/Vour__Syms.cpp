@@ -1,20 +1,22 @@
 // Verilated -*- C++ -*-
 // DESCRIPTION: Verilator output: Symbol table implementation internals
 
-#include "Vtop__Syms.h"
-#include "Vtop.h"
+#include "Vour__Syms.h"
+#include "Vour.h"
 
 
 
 // FUNCTIONS
-Vtop__Syms::~Vtop__Syms()
+Vour__Syms::~Vour__Syms()
 {
 }
 
-Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, Vtop* topp, const char* namep)
+Vour__Syms::Vour__Syms(VerilatedContext* contextp, Vour* topp, const char* namep)
     // Setup locals
     : VerilatedSyms{contextp}
     , __Vm_namep(namep)
+    , __Vm_activity(false)
+    , __Vm_baseCode(0)
     , __Vm_didInit(false)
     // Setup submodule names
 {

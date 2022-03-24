@@ -1,4 +1,5 @@
 module top(
+    //verilator
     input [2:0]function_chosing,
     output reg out_led,//led指示灯,
     input [3:0]signed_A,

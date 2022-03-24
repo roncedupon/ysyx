@@ -3,6 +3,8 @@ module top(
     output out_led,//led指示灯,
     input [3:0]signed_A,
     input [3:0]signed_B,
+    input clk,
+    input rst,
     //输入有符号数的补码
     //正数的补码就是源码本身
     //负数的补码是反码加一
@@ -14,9 +16,10 @@ module top(
 
                     
 
-    output reg[4:0]out_result,//计算结果
+    output reg[4:0]out_result//计算结果
 );
-always@(function_chosing) begin
+always@(posedge clk or posedge rst) begin
+        
         case(function_chosing)
             3'b000:begin
                 out_result<=signed_A+signed_B;

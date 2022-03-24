@@ -5,52 +5,45 @@
 // The class here is then constructed to instantiate the design.
 // See the Verilator manual for examples.
 
-#ifndef VERILATED_VTOP_H_
-#define VERILATED_VTOP_H_  // guard
+#ifndef VERILATED_VOUR_H_
+#define VERILATED_VOUR_H_  // guard
 
 #include "verilated_heavy.h"
 
 //==========
 
-class Vtop__Syms;
+class Vour__Syms;
+class Vour_VerilatedVcd;
+
 
 //----------
 
-VL_MODULE(Vtop) {
+VL_MODULE(Vour) {
   public:
-
-    // PORTS
-    // The application code writes and reads these signals to
-    // propagate new values into/out from the Verilated model.
-    VL_IN8(clk,0,0);
-    VL_IN8(rst,0,0);
-    VL_OUT16(led,15,0);
-
-    // LOCAL SIGNALS
-    // Internals; generally not touched by application code
-    IData/*31:0*/ top__DOT__count;
 
     // LOCAL VARIABLES
     // Internals; generally not touched by application code
-    CData/*0:0*/ __Vclklast__TOP__clk;
+    VlUnpacked<CData/*0:0*/, 1> __Vm_traceActivity;
 
     // INTERNAL VARIABLES
     // Internals; generally not touched by application code
-    Vtop__Syms* __VlSymsp;  // Symbol table
+    Vour__Syms* __VlSymsp;  // Symbol table
 
     // CONSTRUCTORS
   private:
-    VL_UNCOPYABLE(Vtop);  ///< Copying not allowed
+    VL_UNCOPYABLE(Vour);  ///< Copying not allowed
   public:
     /// Construct the model; called by application code
     /// If contextp is null, then the model will use the default global context
     /// If name is "", then makes a wrapper with a
     /// single model invisible with respect to DPI scope names.
-    Vtop(VerilatedContext* contextp, const char* name = "TOP");
-    Vtop(const char* name = "TOP")
-      : Vtop(nullptr, name) {}
+    Vour(VerilatedContext* contextp, const char* name = "TOP");
+    Vour(const char* name = "TOP")
+      : Vour(nullptr, name) {}
     /// Destroy the model; called (often implicitly) by application code
-    ~Vtop();
+    ~Vour();
+    /// Trace signals in the model; called by application code
+    void trace(VerilatedVcdC* tfp, int levels, int options = 0);
 
     // API METHODS
     /// Return current simulation context for this model.
@@ -67,22 +60,28 @@ VL_MODULE(Vtop) {
     void final();
 
     // INTERNAL METHODS
-    static void _eval_initial_loop(Vtop__Syms* __restrict vlSymsp);
-    void __Vconfigure(Vtop__Syms* symsp, bool first);
+    static void _eval_initial_loop(Vour__Syms* __restrict vlSymsp);
+    void __Vconfigure(Vour__Syms* symsp, bool first);
   private:
-    static QData _change_request(Vtop__Syms* __restrict vlSymsp);
-    static QData _change_request_1(Vtop__Syms* __restrict vlSymsp);
-    static void _ctor_var_reset(Vtop* self) VL_ATTR_COLD;
+    static QData _change_request(Vour__Syms* __restrict vlSymsp);
+    static QData _change_request_1(Vour__Syms* __restrict vlSymsp);
+    static void _ctor_var_reset(Vour* self) VL_ATTR_COLD;
   public:
-    static void _eval(Vtop__Syms* __restrict vlSymsp);
+    static void _eval(Vour__Syms* __restrict vlSymsp);
   private:
 #ifdef VL_DEBUG
     void _eval_debug_assertions();
 #endif  // VL_DEBUG
   public:
-    static void _eval_initial(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _eval_settle(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
-    static void _sequent__TOP__1(Vtop__Syms* __restrict vlSymsp);
+    static void _eval_initial(Vour__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _eval_settle(Vour__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _initial__TOP__1(Vour__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+  private:
+    static void traceCleanup(void* userp, VerilatedVcd* /*unused*/);
+    static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInitTop(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    void traceRegister(VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------
