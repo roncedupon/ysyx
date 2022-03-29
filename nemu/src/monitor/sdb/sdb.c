@@ -94,6 +94,14 @@ static int cmd_q(char *args) {
   return -1;//这里没问题--cmd_q一直返回的是-1
 }
 
+static int cmd_cal(char*args){
+  //第一步先识别出token
+  bool success;
+  expr(args,&success);
+
+
+  return 0;
+}
 
 static int cmd_help(char *args);
 
@@ -107,7 +115,8 @@ static struct {
   { "q", "Exit NEMU", cmd_q },
   {"si","单步调试",cmd_si},
   {"info","打印寄存器",cmd_info},
-  {"x","扫描内存",cmd_EXPR}
+  {"x","扫描内存",cmd_EXPR},
+  {"p","表达式求值",cmd_cal},//cmd_calculate
 
   /* TODO: Add more commands */
 

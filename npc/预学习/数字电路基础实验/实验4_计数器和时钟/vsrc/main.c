@@ -8,7 +8,6 @@ input rst,
 output reg [15:0] led
 */
 //double sc_time_stamp() { return 0; }//这玩意不知道是干啥的,没啥用
-int SWITCH=0;//选择要不要输出波形,0不要,1要
 int main(int argc, char** argv, char** env) {
     // nvboard_bind_all_pins(&dut);
     // nvboard_init();
@@ -36,7 +35,7 @@ int main(int argc, char** argv, char** env) {
     top->trace(tfp, 0);//模板
     tfp->open("wave.vcd");//模板
     //模拟50Mh时钟
-    const long int Total_Time=1000000;//总时间1ms,
+    const long int Total_Time=10000000;//总时间1ms,
     while (!contextp->gotFinish()&&contextp->time()<Total_Time*5) {
         contextp->timeInc(1);//1ps
         if((contextp->time())%1000==1)top->clk = !top->clk;//2000ps一个周期--50Mhz
@@ -48,6 +47,7 @@ int main(int argc, char** argv, char** env) {
             }
             // 还是在if里面写其他的信号描述
             //printf("%x\n",top->out_q);
+ +-
             
         }
         // if(top->en_o){错误写法

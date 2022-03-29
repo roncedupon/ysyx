@@ -30,9 +30,19 @@ Vtop::~Vtop() {
     VL_DO_CLEAR(delete __VlSymsp, __VlSymsp = nullptr);
 }
 
+void Vtop::_settle__TOP__2(Vtop__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_settle__TOP__2\n"); );
+    Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->en_o = vlTOPp->top__DOT__en;
+}
+
 void Vtop::_eval_initial(Vtop__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_eval_initial\n"); );
     Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
+    // Body
+    vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
+    vlTOPp->__Vclklast__TOP__rst = vlTOPp->rst;
 }
 
 void Vtop::final() {
@@ -46,14 +56,20 @@ void Vtop::_eval_settle(Vtop__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_eval_settle\n"); );
     Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    vlTOPp->_combo__TOP__1(vlSymsp);
+    vlTOPp->_settle__TOP__2(vlSymsp);
 }
 
 void Vtop::_ctor_var_reset(Vtop* self) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_ctor_var_reset\n"); );
     // Body
     if (false && self) {}  // Prevent unused
-    self->a = 0;
-    self->b = 0;
-    self->f = 0;
+    self->clk = VL_RAND_RESET_I(1);
+    self->en_o = VL_RAND_RESET_I(1);
+    self->rst = VL_RAND_RESET_I(1);
+    self->out_q = VL_RAND_RESET_I(8);
+    self->top__DOT__en = VL_RAND_RESET_I(1);
+    self->top__DOT__counter = VL_RAND_RESET_I(32);
+    for (int __Vi0=0; __Vi0<1; ++__Vi0) {
+        self->__Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
+    }
 }

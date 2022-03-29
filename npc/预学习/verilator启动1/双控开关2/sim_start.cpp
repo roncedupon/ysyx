@@ -13,11 +13,7 @@ int main(int argc, char **argv)
     Verilated::commandArgs(argc, argv);
     Verilated::traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
-
     Vtop *top = new Vtop("top");
-
-    
-
     top->trace(tfp, 0);
     tfp->open("wave.vcd");
 

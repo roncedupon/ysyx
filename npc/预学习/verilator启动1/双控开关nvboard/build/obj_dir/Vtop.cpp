@@ -34,7 +34,7 @@ void Vtop::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 15, "",
+            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/verilator\345\220\257\345\212\2501/\345\217\214\346\216\247\345\274\200\345\205\263nvboard/vsrc/top.v", 1, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -59,7 +59,7 @@ void Vtop::_eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 15, "",
+            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/verilator\345\220\257\345\212\2501/\345\217\214\346\216\247\345\274\200\345\205\263nvboard/vsrc/top.v", 1, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {

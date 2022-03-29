@@ -22,9 +22,27 @@ VL_MODULE(Vtop) {
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN8(a,0,0);
-    VL_IN8(b,0,0);
-    VL_OUT8(f,0,0);
+    VL_IN8(clk,0,0);
+    VL_IN8(rst,0,0);
+    VL_OUT8(en_o,0,0);
+    VL_OUT8(out_q,7,0);
+    VL_OUT8(SEG_low,6,0);
+    VL_OUT8(SEG_high,6,0);
+
+    // LOCAL SIGNALS
+    // Internals; generally not touched by application code
+    CData/*0:0*/ top__DOT__en;
+    CData/*3:0*/ top__DOT__counter_seg;
+    CData/*0:0*/ top__DOT__en_seg_low;
+    CData/*3:0*/ top__DOT__counter_seg_high;
+    IData/*31:0*/ top__DOT__counter;
+
+    // LOCAL VARIABLES
+    // Internals; generally not touched by application code
+    CData/*0:0*/ __Vclklast__TOP__clk;
+    CData/*0:0*/ __Vclklast__TOP__rst;
+    static VlUnpacked<CData/*6:0*/, 32> __Vtable1_SEG_high;
+    static VlUnpacked<CData/*6:0*/, 32> __Vtable2_SEG_low;
 
     // INTERNAL VARIABLES
     // Internals; generally not touched by application code
@@ -64,9 +82,6 @@ VL_MODULE(Vtop) {
   private:
     static QData _change_request(Vtop__Syms* __restrict vlSymsp);
     static QData _change_request_1(Vtop__Syms* __restrict vlSymsp);
-  public:
-    static void _combo__TOP__1(Vtop__Syms* __restrict vlSymsp);
-  private:
     static void _ctor_var_reset(Vtop* self) VL_ATTR_COLD;
   public:
     static void _eval(Vtop__Syms* __restrict vlSymsp);
@@ -77,6 +92,8 @@ VL_MODULE(Vtop) {
   public:
     static void _eval_initial(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _sequent__TOP__1(Vtop__Syms* __restrict vlSymsp);
+    static void _settle__TOP__2(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------

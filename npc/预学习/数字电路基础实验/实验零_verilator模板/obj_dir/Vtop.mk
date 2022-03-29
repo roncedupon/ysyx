@@ -4,7 +4,7 @@
 # Execute this makefile from the object directory:
 #    make -f Vtop.mk
 
-default: /home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/build/top
+default: Vtop
 
 ### Constants...
 # Perl executable (from $PERL)
@@ -33,24 +33,17 @@ VM_PREFIX = Vtop
 VM_MODPREFIX = Vtop
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-	-I/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/nvboard/include \
-	-DTOP_NAME="Vtop" \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
-	/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/nvboard/build/nvboard.a \
-	-lSDL2 \
-	-lSDL2_image \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
-	auto_bind \
 	main \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
-	/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/build \
-	/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/csrc \
+	. \
 
 
 ### Default rules...
@@ -62,13 +55,11 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-auto_bind.o: /home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/build/auto_bind.cpp
-	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-main.o: /home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/csrc/main.cpp
+main.o: main.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
-/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/预学习/数字电路基础实验/实验一_选择器/build/top: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
+Vtop: $(VK_USER_OBJS) $(VK_GLOBAL_OBJS) $(VM_PREFIX)__ALL.a $(VM_HIER_LIBS)
 	$(LINK) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) $(LIBS) $(SC_LIBS) -o $@
 
 

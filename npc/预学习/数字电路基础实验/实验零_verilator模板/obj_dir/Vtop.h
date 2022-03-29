@@ -13,6 +13,8 @@
 //==========
 
 class Vtop__Syms;
+class Vtop_VerilatedVcd;
+
 
 //----------
 
@@ -22,9 +24,21 @@ VL_MODULE(Vtop) {
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN8(a,0,0);
-    VL_IN8(b,0,0);
-    VL_OUT8(f,0,0);
+    VL_IN8(clk,0,0);
+    VL_IN8(rst,0,0);
+    VL_OUT8(en_o,0,0);
+    VL_OUT8(out_q,7,0);
+
+    // LOCAL SIGNALS
+    // Internals; generally not touched by application code
+    CData/*0:0*/ top__DOT__en;
+    IData/*31:0*/ top__DOT__counter;
+
+    // LOCAL VARIABLES
+    // Internals; generally not touched by application code
+    CData/*0:0*/ __Vclklast__TOP__clk;
+    CData/*0:0*/ __Vclklast__TOP__rst;
+    VlUnpacked<CData/*0:0*/, 1> __Vm_traceActivity;
 
     // INTERNAL VARIABLES
     // Internals; generally not touched by application code
@@ -43,6 +57,8 @@ VL_MODULE(Vtop) {
       : Vtop(nullptr, name) {}
     /// Destroy the model; called (often implicitly) by application code
     ~Vtop();
+    /// Trace signals in the model; called by application code
+    void trace(VerilatedVcdC* tfp, int levels, int options = 0);
 
     // API METHODS
     /// Return current simulation context for this model.
@@ -64,9 +80,6 @@ VL_MODULE(Vtop) {
   private:
     static QData _change_request(Vtop__Syms* __restrict vlSymsp);
     static QData _change_request_1(Vtop__Syms* __restrict vlSymsp);
-  public:
-    static void _combo__TOP__1(Vtop__Syms* __restrict vlSymsp);
-  private:
     static void _ctor_var_reset(Vtop* self) VL_ATTR_COLD;
   public:
     static void _eval(Vtop__Syms* __restrict vlSymsp);
@@ -77,6 +90,18 @@ VL_MODULE(Vtop) {
   public:
     static void _eval_initial(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
     static void _eval_settle(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+    static void _sequent__TOP__1(Vtop__Syms* __restrict vlSymsp);
+    static void _settle__TOP__2(Vtop__Syms* __restrict vlSymsp) VL_ATTR_COLD;
+  private:
+    static void traceChgSub0(void* userp, VerilatedVcd* tracep);
+    static void traceChgTop0(void* userp, VerilatedVcd* tracep);
+    static void traceCleanup(void* userp, VerilatedVcd* /*unused*/);
+    static void traceFullSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceFullTop0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInitSub0(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInitTop(void* userp, VerilatedVcd* tracep) VL_ATTR_COLD;
+    void traceRegister(VerilatedVcd* tracep) VL_ATTR_COLD;
+    static void traceInit(void* userp, VerilatedVcd* tracep, uint32_t code) VL_ATTR_COLD;
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
 //----------
