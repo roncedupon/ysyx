@@ -1,7 +1,7 @@
 #include "sdb.h"
 
 #define NR_WP 32
-
+//监视点开始(解引用还没做)20220330 22:10
 typedef struct watchpoint {
   int NO;
   struct watchpoint *next;
