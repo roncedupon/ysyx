@@ -16,7 +16,9 @@ void isa_reg_display() {//64
 
 word_t isa_reg_str2val(const char *s, bool *success) {
   int i=0;
-  while(*s!=*regs[i])i++;//获取到s所在regs中的位置
+  printf("%s_____%s\n",s+sizeof(char),regs[5]);
+  while(strcmp(s+sizeof(char),regs[i]))i++;//获取到s所在regs中的位置
+  
   printf("%s寄存器:0x%016lx\n",regs[i], cpu.gpr[i]);//输出寄存器的值
-  return 0;
+  return cpu.gpr[i];
 }

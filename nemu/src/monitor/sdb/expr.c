@@ -1,5 +1,5 @@
 #include <isa.h>
-
+#include"string.h"
 /* We use the POSIX regex functions to process regular expressions.
  * Type 'man regex' for more information about POSIX regex functions.
  */
@@ -185,7 +185,10 @@ static bool make_token(char *e) {
             printf("这tm是16进制\n");
             break;
           case TK_STR_NAME:
+            tokens[counter_tokens].type=rules[i].token_type;
+            memcpy(tokens[counter_tokens].str,e+position-substr_len,sizeof(char)*substr_len);
             printf("这tm是一个$字符串\n");
+            break;
           default: TODO();
         }
         //把识别出来的token]存起来
@@ -211,13 +214,16 @@ bool check_parentheses(int p,int q){
   return false;//匹配括号
 }
 
-int32_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint32_t类型
+word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint32_t类型
 //输入p为表达式左边界,q为表达式右边界
   if (p > q) {
     return 1;//error
   }
   else if (p == q) {
-
+    if(tokens[p].str[0]=='$'){
+        bool success=true;
+        return isa_reg_str2val(tokens[p].str,&success);
+      }//如果当前token是$字符串,就返回$字符串指示的内存的数据
     return atoi(tokens[p].str);//如果当前左边界等于有边界,那它就是一个number
   }
   else if (check_parentheses(p, q) == true) {
@@ -252,11 +258,11 @@ int32_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint
         op=i;
     }
   }
+  
 
 
 
-
- 
+  
   int32_t  val1 = eval(p, op - 1);
   int32_t  val2 = eval(op + 1, q);
   // TK_NOTYPE = 256, TK_EQ=255,TK_PLUS=254,TK_SUB=253,TK_MUL=252,TK_DIV=251,TK_BRK_L=250,
@@ -280,7 +286,7 @@ word_t expr(char *e, bool *success) {
   }
   printf("\n识别出了全部token,下面开始表达式求值\n");
   printf("token的个数为%d\n",tokens_num);
-  printf("表达式的值为%d\n",eval(0,tokens_num-1));
+  printf("表达式的值为%ld\n",eval(0,tokens_num-1));
   //eval(0,length(tokens));
   /* TODO: Insert codes to evaluate the expression. */
   //TODO();
