@@ -34,7 +34,7 @@ void Vtop::eval_step() {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ubuntu/ysyx/ysyx-workbench/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 1, "",
+            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 15, "",
                 "Verilated model didn't converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -59,7 +59,7 @@ void Vtop::_eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
             Verilated::debug(1);
             __Vchange = _change_request(vlSymsp);
             Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("/home/ubuntu/ysyx/ysyx-workbench/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 1, "",
+            VL_FATAL_MT("/home/ubuntu/Desktop/ysyx1/ysyx-daiyao/npc/\351\242\204\345\255\246\344\271\240/\346\265\201\346\260\264\347\201\2573nvb/vsrc/top.v", 15, "",
                 "Verilated model didn't DC converge\n"
                 "- See https://verilator.org/warn/DIDNOTCONVERGE");
         } else {
@@ -68,42 +68,18 @@ void Vtop::_eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
     } while (VL_UNLIKELY(__Vchange));
 }
 
-VL_INLINE_OPT void Vtop::_sequent__TOP__1(Vtop__Syms* __restrict vlSymsp) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_sequent__TOP__1\n"); );
+VL_INLINE_OPT void Vtop::_combo__TOP__1(Vtop__Syms* __restrict vlSymsp) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_combo__TOP__1\n"); );
     Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
-    // Variables
-    SData/*15:0*/ __Vdly__led;
-    IData/*31:0*/ __Vdly__top__DOT__count;
     // Body
-    __Vdly__top__DOT__count = vlTOPp->top__DOT__count;
-    __Vdly__led = vlTOPp->led;
-    if (vlTOPp->rst) {
-        __Vdly__led = 1U;
-        __Vdly__top__DOT__count = 0U;
-    } else {
-        if ((0U == vlTOPp->top__DOT__count)) {
-            __Vdly__led = ((0xfffeU & ((IData)(vlTOPp->led) 
-                                       << 1U)) | (1U 
-                                                  & ((IData)(vlTOPp->led) 
-                                                     >> 0xfU)));
-        }
-        __Vdly__top__DOT__count = ((0x1f4U <= vlTOPp->top__DOT__count)
-                                    ? 0U : ((IData)(1U) 
-                                            + vlTOPp->top__DOT__count));
-    }
-    vlTOPp->led = __Vdly__led;
-    vlTOPp->top__DOT__count = __Vdly__top__DOT__count;
+    vlTOPp->f = ((IData)(vlTOPp->a) ^ (IData)(vlTOPp->b));
 }
 
 void Vtop::_eval(Vtop__Syms* __restrict vlSymsp) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_eval\n"); );
     Vtop* const __restrict vlTOPp VL_ATTR_UNUSED = vlSymsp->TOPp;
     // Body
-    if (((IData)(vlTOPp->clk) & (~ (IData)(vlTOPp->__Vclklast__TOP__clk)))) {
-        vlTOPp->_sequent__TOP__1(vlSymsp);
-    }
-    // Final
-    vlTOPp->__Vclklast__TOP__clk = vlTOPp->clk;
+    vlTOPp->_combo__TOP__1(vlSymsp);
 }
 
 VL_INLINE_OPT QData Vtop::_change_request(Vtop__Syms* __restrict vlSymsp) {
@@ -126,9 +102,9 @@ VL_INLINE_OPT QData Vtop::_change_request_1(Vtop__Syms* __restrict vlSymsp) {
 void Vtop::_eval_debug_assertions() {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop::_eval_debug_assertions\n"); );
     // Body
-    if (VL_UNLIKELY((clk & 0xfeU))) {
-        Verilated::overWidthError("clk");}
-    if (VL_UNLIKELY((rst & 0xfeU))) {
-        Verilated::overWidthError("rst");}
+    if (VL_UNLIKELY((a & 0xfeU))) {
+        Verilated::overWidthError("a");}
+    if (VL_UNLIKELY((b & 0xfeU))) {
+        Verilated::overWidthError("b");}
 }
 #endif  // VL_DEBUG

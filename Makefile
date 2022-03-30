@@ -2,7 +2,7 @@ STUID = ysyx_22040913
 STUNAME = 代尧
 #commit
 # DO NOT modify the following code!!!
-
+#这是一个注释
 TRACER = tracer-ysyx2204
 GITFLAGS = -q --author='$(TRACER) <tracer@ysyx.org>' --no-verify --allow-empty
 
