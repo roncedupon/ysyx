@@ -35,19 +35,19 @@ void new_wp(char*args)//当用户要监视一个表达式时,用new_wp申请一�
  WP*tmp=free_;//先让tmp指向free_
  if(free_->next)
     free_=free_->next;//free_指向free_下一个
- else 
-    assert(0);
-    if(head)
-      tmp->next=head->next;//头插法,先让tmp指向head的下一个,从而断开head和head原next的连接
-    else
-      head->next=tmp;
- head->next=tmp;//让head指向tmp,从而实现将free_第一个插入到head和head->next之间
- head->next->EXPR=args;
- bool success=true;
- head->next->EXPR_VALUE=expr(args,&success);
+ else {
+  printf("监视点池没了,被榨干了\n");
+  assert(0);
+ }
+bool success=true;//没有头节点的链表,采用头插法
+tmp->EXPR_VALUE=expr(args,&success);
+tmp->EXPR=args;
+tmp->next=head;
+head=tmp;
 }
 void free_wp(WP *wp){
   //free_wp()将wp归还到free_链表中, 这两个函数会作为监视点池的接口被其它函数调用.
+  
 }
 
 
