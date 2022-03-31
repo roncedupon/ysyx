@@ -3,8 +3,8 @@
 #define NR_WP 32
 
 typedef struct watchpoint {
-  int NO;
-  struct watchpoint *next;
+  int NO;//监视点的序号
+  struct watchpoint *next;//下一个监视点
 
   /* TODO: Add more members if necessary */
 

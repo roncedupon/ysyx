@@ -167,13 +167,14 @@ static bool make_token(char *e) {
             if (tokens[counter_tokens].type == TK_MUL 
             && (counter_tokens == 0 
             ||tokens[counter_tokens - 1].type != TK_NUM//不是数字,那他也是解引用
-            ||tokens[counter_tokens-1].type==  TK_BRK_R //如果*前面不是右括号,那他也是解引用
+            ||tokens[counter_tokens-1].type!= TK_BRK_R //如果*前面是右括号,那他也是解引用
             ||tokens[counter_tokens-1].type==TK_DEREFERENCE//如果*号前面是解引用,那么这个*也是解引用
             ||tokens[counter_tokens-1].type==TK_BRK_L//如果*前面是一个(,那他也是解引用
               )   
              ) 
             {
-              //tokens[counter_tokens].type = TK_DEREFERENCE;//3.31用来指针解引用
+              tokens[counter_tokens].type = TK_DEREFERENCE;//3.31用来指针解引用
+              //如果是解引用的话,那就先解出来存到tokens里
               printf("这个*号tm用来解引用");
             }
             break;
@@ -199,6 +200,9 @@ static bool make_token(char *e) {
             printf("这是一个数字%d\n",atoi(tokens[counter_tokens].str));
             break;
           case TK_HEX:
+            tokens[counter_tokens].type=TK_HEX;
+            //memcpy(tokens[counter_tokens].str,e+position-substr_len,sizeof(char)*substr_len);
+            
             printf("这tm是16进制\n");
             break;
           case TK_STR_NAME:
@@ -262,24 +266,22 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
     //+,-*/
   //(20*31/22+(31-32*3))
   //20*31/22
+  //如果是数字或者解引用符号就跳过
   if(tokens[i].type==248){
-    // if(i!=q){
-    //   if(!is_main_op)//ru若op还不是主运算符,那么让op和i一起前进
-    //     op=i;
-    //   else
-    //    is_main_op=true;
-    // }
+    
     continue;//数字不考虑
   }
-    if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'){//如果扫描到一个加号或减号
-      op=i;//那么当前位置就是主操作符的位置
-    }
-    else if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/') {//如果扫描到一个乘或除号
-       if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/')
-            op=i;
-    }   
-
+  
+    
+  
+  if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'){//如果扫描到一个加号或减号
+    op=i;//那么当前位置就是主操作符的位置
   }
+  else if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/') {//如果扫描到一个乘或除号
+     if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/')
+          op=i;
+  }   
+}
 
 
   
@@ -297,6 +299,8 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
       case 253: return val1 - val2;
       case 252: return val1 * val2;
       case 251: return val1 / val2;
+      case TK_DEREFERENCE:
+        return 0x80000000;//val2;//如果是解引用,就返回引用后面的表达式就行了
       default: assert(0);
     }
   }
