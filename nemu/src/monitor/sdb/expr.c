@@ -40,6 +40,7 @@ enum {
   TK_NUM=248,
   TK_HEX=247,
   TK_STR_NAME=246,
+  TK_
   /* TODO: Add more token types */
 
 };
