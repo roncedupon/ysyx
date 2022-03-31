@@ -2,6 +2,7 @@
 *
 !*/
 !/nemu/*
+!/python_workspace/*
 !/nexus-am/*
 !/nanos-lite/*
 !/navy-apps/*

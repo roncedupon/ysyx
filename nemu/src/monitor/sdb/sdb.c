@@ -76,7 +76,7 @@ static int cmd_EXPR(char*args){
   int number;
   paddr_t address;
   sscanf(args,"%d %x",&number,&address);//用stroke也一样
-//一个地址的值对应8字节,一个数据被存在32字节里(4个地址)
+//一个地址的值对应8bit,一个数据被存在32字节里(4个地址)
   //扫描内存:x 10 0x80000000
   for(int i=0;i<number;i++){
     printf("0x%016x的数据:",address+i*4);
@@ -98,11 +98,18 @@ static int cmd_cal(char*args){
   //第一步先识别出token
   bool success;
   expr(args,&success);
-
-
   return 0;
 }
 
+static int cmd_wp(char*args){
+  printf("开启对表达式%s的监视\n",args);
+  new_wp(args);
+  return 0;
+}
+static int cmd_dwp(char*args){
+  printf("成功删除第%d个监视点\n",atoi(args));
+  return 0;
+}
 static int cmd_help(char *args);
 
 static struct {
@@ -117,6 +124,8 @@ static struct {
   {"info","打印寄存器",cmd_info},
   {"x","扫描内存",cmd_EXPR},
   {"p","表达式求值",cmd_cal},//cmd_calculate
+  {"x","监视点,x EXPR--对表达式EXPR进行监视",cmd_wp},
+  {"d","删除监视点,d N(删除序号为N的监视点",cmd_dwp},
 
   /* TODO: Add more commands */
 
