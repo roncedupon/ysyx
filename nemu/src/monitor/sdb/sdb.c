@@ -103,7 +103,7 @@ static int cmd_cal(char*args){
 
 static int cmd_wp(char*args){
   printf("开启对表达式%s的监视\n",args);
-  new_wp(args);
+  new_wp(args);//创建一个新监视点
   return 0;
 }
 static int cmd_dwp(char*args){
@@ -124,7 +124,7 @@ static struct {
   {"info","打印寄存器",cmd_info},
   {"x","扫描内存",cmd_EXPR},
   {"p","表达式求值",cmd_cal},//cmd_calculate
-  {"x","监视点,x EXPR--对表达式EXPR进行监视",cmd_wp},
+  {"w","监视点,x EXPR--对表达式EXPR进行监视",cmd_wp},
   {"d","删除监视点,d N(删除序号为N的监视点",cmd_dwp},
 
   /* TODO: Add more commands */

@@ -24,19 +24,23 @@ void init_wp_pool() {
     wp_pool[i].next = (i == NR_WP - 1 ? NULL : &wp_pool[i + 1]);//防止溢出
   }
   head = NULL;
+  //head->next=NULL;
   free_ = wp_pool;
 }
 
 
-void new_wp(char*args//当用户要监视一个表达式时,用new_wp申请一个空的监视点结构
-){//其中new_wp()从free_链表中返回一个空闲的监视点结构
+void new_wp(char*args)//当用户要监视一个表达式时,用new_wp申请一个空的监视点结构
+{//其中new_wp()从free_链表中返回一个空闲的监视点结构
  //先从wp_pool中拿一个节点出来用头插法给head链表
  WP*tmp=free_;//先让tmp指向free_
  if(free_->next)
     free_=free_->next;//free_指向free_下一个
  else 
     assert(0);
- tmp->next=head->next;//头插法,先让tmp指向head的下一个,从而断开head和head原next的连接
+    if(head)
+      tmp->next=head->next;//头插法,先让tmp指向head的下一个,从而断开head和head原next的连接
+    else
+      head->next=tmp;
  head->next=tmp;//让head指向tmp,从而实现将free_第一个插入到head和head->next之间
  head->next->EXPR=args;
  bool success=true;
