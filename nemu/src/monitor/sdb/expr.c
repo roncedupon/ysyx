@@ -64,6 +64,7 @@ static struct rule {
   {"/",TK_DIV},
   {"\\(",TK_BRK_L},
   {"\\)",TK_BRK_R},
+  
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -114,6 +115,9 @@ static bool make_token(char *e) {
   int position = 0;
   int i;
   regmatch_t pmatch;//这玩意是使用正则表达式的
+//23*32*32*(33*32)
+//
+
 
   nr_token = 0;
   int counter_tokens=0;
@@ -159,7 +163,19 @@ static bool make_token(char *e) {
           case 252:
             tokens[counter_tokens].type=rules[i].token_type;
             tokens[counter_tokens].str[0]='*';
-            printf("这是一个*号");
+            printf("这是一个*号");//3.29
+            if (tokens[counter_tokens].type == TK_MUL 
+            && (counter_tokens == 0 
+            ||tokens[counter_tokens - 1].type != TK_NUM//不是数字,那他也是解引用
+            ||tokens[counter_tokens-1].type==  TK_BRK_R //如果*前面不是右括号,那他也是解引用
+            ||tokens[counter_tokens-1].type==TK_DEREFERENCE//如果*号前面是解引用,那么这个*也是解引用
+            ||tokens[counter_tokens-1].type==TK_BRK_L//如果*前面是一个(,那他也是解引用
+              )   
+             ) 
+            {
+              //tokens[counter_tokens].type = TK_DEREFERENCE;//3.31用来指针解引用
+              printf("这个*号tm用来解引用");
+            }
             break;
           case 251:
             tokens[counter_tokens].type=rules[i].token_type;
@@ -180,7 +196,7 @@ static bool make_token(char *e) {
             tokens[counter_tokens].type=rules[i].token_type;
             memcpy(tokens[counter_tokens].str,e+position-substr_len,sizeof(char)*substr_len);
             //token_saved[counter_tokens]=atoi(tmp);//数字处理比较重要⭐
-            printf("这是一个数字%d\n",atoi(tokens[i].str));
+            printf("这是一个数字%d\n",atoi(tokens[counter_tokens].str));
             break;
           case TK_HEX:
             printf("这tm是16进制\n");
@@ -217,6 +233,7 @@ bool check_parentheses(int p,int q){
 
 word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint32_t类型
 //输入p为表达式左边界,q为表达式右边界
+  //bool is_main_op=false;//op是否是主运算符
   if (p > q) {
     return 1;//error
   }
@@ -244,21 +261,27 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
     //同级运算符处理
     //+,-*/
   //(20*31/22+(31-32*3))
+  //20*31/22
   if(tokens[i].type==248){
-    if(i!=q)
-    op++;
+    // if(i!=q){
+    //   if(!is_main_op)//ru若op还不是主运算符,那么让op和i一起前进
+    //     op=i;
+    //   else
+    //    is_main_op=true;
+    // }
     continue;//数字不考虑
   }
-    
-  if(tokens[op].str[0]=='+'||tokens[op].str[0]=='-'){//如果找到一个同级别或者更低级的运算符
-      if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-')
-        op=i;
+    if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'){//如果扫描到一个加号或减号
+      op=i;//那么当前位置就是主操作符的位置
     }
-    else{
-      //if(tokens[i].str=='+'||tokens[i].str=='-')
-        op=i;
-    }
+    else if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/') {//如果扫描到一个乘或除号
+       if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/')
+            op=i;
+    }   
+
   }
+
+
   
 
 
