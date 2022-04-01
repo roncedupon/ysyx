@@ -271,9 +271,6 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
     
     continue;//数字不考虑
   }
-  
-    
-  
   if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'){//如果扫描到一个加号或减号
     op=i;//那么当前位置就是主操作符的位置
   }
@@ -282,13 +279,6 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
           op=i;
   }   
 }
-
-
-  
-
-
-
-  
   int32_t  val1 = eval(p, op - 1);
   int32_t  val2 = eval(op + 1, q);
   // TK_NOTYPE = 256, TK_EQ=255,TK_PLUS=254,TK_SUB=253,TK_MUL=252,TK_DIV=251,TK_BRK_L=250,
@@ -314,11 +304,10 @@ word_t expr(char *e, bool *success) {
   }
   printf("\n识别出了全部token,下面开始表达式求值\n");
   printf("token的个数为%d\n",tokens_num);
-  printf("表达式的值为%ld\n",eval(0,tokens_num-1));
+  word_t result=eval(0,tokens_num-1);
+  printf("表达式的值为%ld\n",result);
   //eval(0,length(tokens));
   /* TODO: Insert codes to evaluate the expression. */
   //TODO();
-
-
-  return 0;
+  return result;
 }

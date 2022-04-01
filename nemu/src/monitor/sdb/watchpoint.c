@@ -1,4 +1,5 @@
 #include "sdb.h"
+//#include"watchpoint.h"
 //监视点
 //w EXPR--设置对表达式EXPR的监视--例如:w *0x2000
 
@@ -17,6 +18,20 @@ static WP *head = NULL, *free_ = NULL;
 //free_用于组织空闲的监视点结构
 //head用于组织使用中的监视点结构
 //init_wp_pool()函数会对两个链表进行初始化↓
+bool watch_point_changed(){
+  bool success=true;
+  while(head){
+    word_t result=expr(head->EXPR,&success);
+    if(result!=head->EXPR_VALUE){
+      printf("%s的值%d----->%ld",head->EXPR,head->EXPR_VALUE,result);
+      head->EXPR_VALUE=result;
+      //head=head->next;
+    return true;
+    }
+    head=head->next;
+  }
+  return false;
+}
 void init_wp_pool() {
   int i;
   for (i = 0; i < NR_WP; i ++) {
@@ -28,7 +43,7 @@ void init_wp_pool() {
   free_ = wp_pool;
 }
 
-
+//new_wp对wp_pool进行修改
 void new_wp(char*args)//当用户要监视一个表达式时,用new_wp申请一个空的监视点结构
 {//其中new_wp()从free_链表中返回一个空闲的监视点结构
  //先从wp_pool中拿一个节点出来用头插法给head链表

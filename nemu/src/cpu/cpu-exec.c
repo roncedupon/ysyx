@@ -2,27 +2,37 @@
 #include <cpu/decode.h>
 #include <cpu/difftest.h>
 #include <locale.h>
-
+//#include<../../../monitor/sdb/watchpoint.h>
 /* The assembly code of instructions executed is only output to the screen
  * when the number of instructions executed is less than this value.
  * This is useful when you use the `si' command.
  * You can modify this value as you want.
  */
 #define MAX_INST_TO_PRINT 10
-
+bool watch_point_changed();//声明
 CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
+// bool watch_point_changed(WP*head){
+//   printf("trace_and_difftest函数执行\n");
+//   printf("%d--------------\n",head.NO);
+//   return false;
+// }
 
 void device_update();
-
+//每当cpu_exec()的循环执行完一条指令, 都会调用一次trace_and_difftest()函数. 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 #ifdef CONFIG_ITRACE_COND
   if (ITRACE_COND) { log_write("%s\n", _this->logbuf); }
 #endif
   if (g_print_step) { IFDEF(CONFIG_ITRACE, puts(_this->logbuf)); }
   IFDEF(CONFIG_DIFFTEST, difftest_step(_this->pc, dnpc));
+  //4.1扫描监视点
+  if(watch_point_changed()){
+    printf("触发了fuck断点,你tm想干啥?\n");
+    nemu_state.state=NEMU_STOP;
+  }
 }
 
 static void exec_once(Decode *s, vaddr_t pc) {

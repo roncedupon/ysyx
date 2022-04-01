@@ -103,7 +103,7 @@ static int cmd_cal(char*args){
 
 static int cmd_wp(char*args){
   printf("开启对表达式%s的监视\n",args);
-  new_wp(args);//创建一个新监视点
+  new_wp(args);//创建一个新监视点,将这个表达式传入
   return 0;
 }
 static int cmd_dwp(char*args){
