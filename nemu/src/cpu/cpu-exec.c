@@ -10,6 +10,8 @@
  */
 #define MAX_INST_TO_PRINT 10
 bool watch_point_changed();//声明
+void watch_point_test();
+
 CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
@@ -31,8 +33,11 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
   //4.1扫描监视点
   if(watch_point_changed()){
     printf("触发了fuck断点,你tm想干啥?\n");
+    watch_point_test();
     nemu_state.state=NEMU_STOP;
   }
+  
+  
 }
 
 static void exec_once(Decode *s, vaddr_t pc) {

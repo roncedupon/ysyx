@@ -7,8 +7,8 @@
 
 typedef struct watchpoint {
   int NO;//监视点的序号
-  char *EXPR;//监视点的表达式
-  uint32_t EXPR_VALUE;//监视点的值
+  char EXPR[32];//监视点的表达式---⭐这里一个大坑,这里要存东西的话必须用数组,不能用char *EXPR
+  word_t EXPR_VALUE;//监视点的值
   struct watchpoint *next;//下一个监视点
   /* TODO: Add more members if necessary */
 } WP;
@@ -18,17 +18,25 @@ static WP *head = NULL, *free_ = NULL;
 //free_用于组织空闲的监视点结构
 //head用于组织使用中的监视点结构
 //init_wp_pool()函数会对两个链表进行初始化↓
+void watch_point_test(){
+  WP*tmp=head;
+  while(tmp){
+    printf("fuck---string:%s----%ld",tmp->EXPR,tmp->EXPR_VALUE);
+    tmp=tmp->next;
+  }
+}
 bool watch_point_changed(){
   bool success=true;
-  while(head){
-    word_t result=expr(head->EXPR,&success);
+  WP*tmp_head=head;
+  while(tmp_head){
+    word_t result=expr(tmp_head->EXPR,&success);
     if(result!=head->EXPR_VALUE){
-      printf("%s的值%d----->%ld",head->EXPR,head->EXPR_VALUE,result);
-      head->EXPR_VALUE=result;
+      printf("%s的值%ld----->%ld",head->EXPR,head->EXPR_VALUE,result);
+      tmp_head->EXPR_VALUE=result;
       //head=head->next;
     return true;
     }
-    head=head->next;
+    tmp_head=tmp_head->next;
   }
   return false;
 }
@@ -56,7 +64,7 @@ void new_wp(char*args)//当用户要监视一个表达式时,用new_wp申请一�
  }
 bool success=true;//没有头节点的链表,采用头插法
 tmp->EXPR_VALUE=expr(args,&success);
-tmp->EXPR=args;
+strcpy(tmp->EXPR,args);//要复制一串字符串就用strcpy,要复制字符串中的一部分就用memcpy
 tmp->next=head;
 head=tmp;
 }
