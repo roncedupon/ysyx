@@ -261,7 +261,7 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
     //int main_op=251;
     if(tokens[i].str[0]=='(')
       while(tokens[i].str[0]!=')')i++;//忽略括号内的
-
+//
     //同级运算符处理
     //+,-*/
   //(20*31/22+(31-32*3))
