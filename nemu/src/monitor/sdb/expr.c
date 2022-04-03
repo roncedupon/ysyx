@@ -166,8 +166,8 @@ static bool make_token(char *e) {
             printf("这是一个*号");//3.29
             if (tokens[counter_tokens].type == TK_MUL 
             && (counter_tokens == 0 
-            ||tokens[counter_tokens - 1].type != TK_NUM//不是数字,那他也是解引用
-            ||tokens[counter_tokens-1].type!= TK_BRK_R //如果*前面是右括号,那他也是解引用
+            ||(tokens[counter_tokens - 1].type != TK_NUM//不是数字,那他也是解引用
+            &&tokens[counter_tokens-1].type!= TK_BRK_R) //如果*前不面是右括号,那他也是解引用
             ||tokens[counter_tokens-1].type==TK_DEREFERENCE//如果*号前面是解引用,那么这个*也是解引用
             ||tokens[counter_tokens-1].type==TK_BRK_L//如果*前面是一个(,那他也是解引用
               )   
@@ -226,12 +226,22 @@ static bool make_token(char *e) {
   return true;
 }
 bool check_parentheses(int p,int q){
-  if(tokens[p].str[0]=='('&&tokens[q].str[0]==')'){
-    printf("找到fuck括号了");
-    printf("%c%c\n",tokens[p].str[0],tokens[q].str[0]);
-    return true;
+  //判断条件应该是第一个右括号是否在q的位置
+  //而不是简单地比较p,q是否是右括号
+  // if(tokens[p].str[0]=='('&&tokens[q].str[0]==')'){
+  //   printf("找到fuck括号了");
+  //   printf("%c%c\n",tokens[p].str[0],tokens[q].str[0]);
+  //   return true;
+  // }
+  for (int i=p;i<=q;i++){
+    if(tokens[i].str[0]==')'){
+        //从p开始寻找第一个右括号
+      if(i!=q)
+        return false;
+      else
+        return true;
+    }
   }
-  
   return false;//匹配括号
 }
 
@@ -271,16 +281,20 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
     
     continue;//数字不考虑
   }
+//  if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'||tokens[i].str[0]=='*'||tokens[i].str[0]=='*'){
   if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'){//如果扫描到一个加号或减号
     op=i;//那么当前位置就是主操作符的位置
   }
   else if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/') {//如果扫描到一个乘或除号
-     if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/')
+	 
+     if(tokens[op].str[0]!='+'&&tokens[op].str[0]!='-')
           op=i;
-  }   
+    
+  }
+     
 }
-  int32_t  val1 = eval(p, op - 1);
-  int32_t  val2 = eval(op + 1, q);
+  word_t  val1 = eval(p, op - 1);
+  word_t  val2 = eval(op + 1, q);
   // TK_NOTYPE = 256, TK_EQ=255,TK_PLUS=254,TK_SUB=253,TK_MUL=252,TK_DIV=251,TK_BRK_L=250,
   // TK_BRK_R=249,
   // TK_NUM=248,

@@ -4,8 +4,8 @@
 #include <cpu/decode.h>
 
 #define R(i) gpr(i)
-#define Mr vaddr_read
-#define Mw vaddr_write
+#define Mr vaddr_read//虚拟内存读
+#define Mw vaddr_write//虚拟内存写,paddr应该就是物理内存读写
 
 enum {
   TYPE_I, TYPE_U, TYPE_S,
@@ -19,9 +19,9 @@ enum {
 #define src2I(i) do { *src2 = i; } while (0)
 #define destI(i) do { *dest = i; } while (0)
 
-static word_t immI(uint32_t i) { return SEXT(BITS(i, 31, 20), 12); }
+static word_t immI(uint32_t i) { return SEXT(BITS(i, 31, 20), 12); }//BITS:截取i[31:20]位
 static word_t immU(uint32_t i) { return SEXT(BITS(i, 31, 12), 20) << 12; }
-static word_t immS(uint32_t i) { return (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); }
+static word_t immS(uint32_t i) { return (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); }//SEXT取低length位
 
 static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, int type) {
   uint32_t i = s->isa.inst.val;
@@ -35,7 +35,6 @@ static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, 
     case TYPE_S: destI(immS(i)); src1R(rs1); src2R(rs2); break;
   }
 }
-
 static int decode_exec(Decode *s) {
   word_t dest = 0, src1 = 0, src2 = 0;
   s->dnpc = s->snpc;
@@ -50,9 +49,10 @@ static int decode_exec(Decode *s) {
   INSTPAT("??????? ????? ????? ??? ????? 00101 11", auipc  , U, R(dest) = src1 + s->pc);
   INSTPAT("??????? ????? ????? 011 ????? 00000 11", ld     , I, R(dest) = Mr(src1 + src2, 8));
   INSTPAT("??????? ????? ????? 011 ????? 01000 11", sd     , S, Mw(src1 + dest, 8, src2));
-
+  //INSTPAT("",li,)
   INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
   INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv    , N, INV(s->pc));
+
   INSTPAT_END();
 
   R(0) = 0; // reset $zero to 0

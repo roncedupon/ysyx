@@ -67,11 +67,12 @@
 //   f(a0) f(a1) f(a2) ...
 // NOTE2: each element in the container can be a tuple
 #define MAP(c, f) c(f)
-
-#define BITMASK(bits) ((1ull << (bits)) - 1)
+//
+#define BITMASK(bits) ((1ull << (bits)) - 1)//unsigned long long 64bit~8B
 #define BITS(x, hi, lo) (((x) >> (lo)) & BITMASK((hi) - (lo) + 1)) // similar to x[hi:lo] in verilog
+//
 #define SEXT(x, len) ({ struct { int64_t n : len; } __x = { .n = x }; (int64_t)__x.n; })
-
+//创建一个__x结构体,这个__x里面有一个n参数,把x赋值给这个n,并且把这个n强制转化位int64_t类型
 #define ROUNDUP(a, sz)   ((((uintptr_t)a) + (sz) - 1) & ~((sz) - 1))
 #define ROUNDDOWN(a, sz) ((((uintptr_t)a)) & ~((sz) - 1))
 
