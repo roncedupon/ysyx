@@ -15,7 +15,8 @@ typedef struct Decode {
 __attribute__((always_inline))
 static inline void pattern_decode(const char *str, int len,
     uint32_t *key, uint32_t *mask, uint32_t *shift) {
-  uint32_t __key = 0, __mask = 0, __shift = 0;
+  uint32_t __key = 0, __mask = 0, __shift = 0;//字符串,长度,键值,掩码,移位,
+  //模式匹配,先不理他
 #define macro(i) \
   if ((i) >= len) goto finish; \
   else { \
@@ -72,6 +73,8 @@ finish:
 
 
 // --- pattern matching wrappers for decode ---
+//在声明不确定形参的函数时，形参部分可以使用省略号“…”代替。
+//“…”告诉编译器，在函数调用时不检查形参类型是否与实参类型相同，也不检查参数个数。
 #define INSTPAT(pattern, ...) do { \
   uint32_t key, mask, shift; \
   pattern_decode(pattern, STRLEN(pattern), &key, &mask, &shift); \
@@ -79,7 +82,7 @@ finish:
     INSTPAT_MATCH(s, ##__VA_ARGS__); \
     goto *(__instpat_end); \
   } \
-} while (0)
+} while (0)//##是连接符,#define a(i) var##i--->int var1=120,printf("%d",a(1));-->输出123
 
 #define INSTPAT_START(name) { const void ** __instpat_end = &&concat(__instpat_end_, name);
 #define INSTPAT_END(name)   concat(__instpat_end_, name): ; }
