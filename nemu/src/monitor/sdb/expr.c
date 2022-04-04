@@ -277,8 +277,7 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
   //(20*31/22+(31-32*3))
   //20*31/22
   //如果是数字或者解引用符号就跳过
-  if(tokens[i].type==248){
-    
+  if(tokens[i].type==248){  
     continue;//数字不考虑
   }
 //  if(tokens[i].str[0]=='+'||tokens[i].str[0]=='-'||tokens[i].str[0]=='*'||tokens[i].str[0]=='*'){
@@ -288,13 +287,18 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
   else if(tokens[i].str[0]=='*'||tokens[i].str[0]=='/') {//如果扫描到一个乘或除号
 	 
      if(tokens[op].str[0]!='+'&&tokens[op].str[0]!='-')
-          op=i;
-    
+          op=i;    
   }
      
 }
-  word_t  val1 = eval(p, op - 1);
-  word_t  val2 = eval(op + 1, q);
+//op
+//0 eval(2,2)
+//
+
+
+//+(5*6)
+  word_t  val1 = eval(p, op - 1);//8
+  word_t  val2 = eval(op + 1, q);//30
   // TK_NOTYPE = 256, TK_EQ=255,TK_PLUS=254,TK_SUB=253,TK_MUL=252,TK_DIV=251,TK_BRK_L=250,
   // TK_BRK_R=249,
   // TK_NUM=248,
@@ -311,14 +315,13 @@ word_t eval(int p, int q) {//现在先方便起见,认为所有结果都是uint3
 }
 
 word_t expr(char *e, bool *success) {
-  
   if (!make_token(e)) {
     *success = false;
     return 0;
   }
   printf("\n识别出了全部token,下面开始表达式求值\n");
   printf("token的个数为%d\n",tokens_num);
-  word_t result=eval(0,tokens_num-1);
+  word_t result= eval(0,tokens_num-1);
   printf("表达式的值为%ld\n",result);
   //eval(0,length(tokens));
   /* TODO: Insert codes to evaluate the expression. */

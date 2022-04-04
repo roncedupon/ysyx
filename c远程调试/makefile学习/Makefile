@@ -7,3 +7,9 @@ app.o:app.c
 main.o:main.c
     gcc -c main.c
 
+#最基本的makefile语句由三部分组成
+#冒号之前为目标,冒号后面的是依赖关系表,也就是编译冒号前的目标所需的文件
+#最后的就是编译指令
+# calc:main.c getch.c getop.c stack.calc
+#      gcc -o calc main.c getch.c getop.c stack.c #makefile的任何命令之前必须有一个tab缩进
+
