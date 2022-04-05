@@ -36,7 +36,7 @@ static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, 
   }
 }
 
-static int decode_exec(Decode *s) {
+static int decode_exec(Decode *s) {//解析指令
   word_t dest = 0, src1 = 0, src2 = 0;
   s->dnpc = s->snpc;
 
@@ -61,6 +61,12 @@ static int decode_exec(Decode *s) {
 }
 
 int isa_exec_once(Decode *s) {
-  s->isa.inst.val = inst_fetch(&s->snpc, 4);
-  return decode_exec(s);
+  s->isa.inst.val = inst_fetch(&s->snpc, 4);//拿32位数据--也就是一条指令
+  //从当前pc所指位置作为起点,拿4字节的数据作为32bit指令放到s->isa.inst.val中
+  //特别注意这里拿完指令后pc自动加4,也就是当前snpc指向了下一条指令地址
+  //于是s中现在pc的状态是:
+  //pc:当前pc地址
+  //snpc:当前pc+4
+  //dnpc:没啥用,目前还没用到
+  return decode_exec(s);//对指令进行解析
 }

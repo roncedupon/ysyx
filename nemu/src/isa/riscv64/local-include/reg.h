@@ -4,6 +4,7 @@
 #include <common.h>
 
 static inline int check_reg_idx(int idx) {
+  printf("当前用的寄存器是第%d个寄存器\n",idx);
   IFDEF(CONFIG_RT_CHECK, assert(idx >= 0 && idx < 32));
   return idx;
 }

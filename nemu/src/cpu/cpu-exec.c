@@ -12,7 +12,7 @@
 bool watch_point_changed();//声明
 void watch_point_test();
 
-CPU_state cpu = {};
+CPU_state cpu = {};//在此初始化cpu
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
@@ -40,10 +40,10 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
   
 }
 
-static void exec_once(Decode *s, vaddr_t pc) {
-  s->pc = pc;//执行一条指令
-  s->snpc = pc;
-  isa_exec_once(s);
+static void exec_once(Decode *s, vaddr_t pc) {//获取pc的地址
+  s->pc = pc;//pc的位置--将pc当前指向的位置存入s->pc
+  s->snpc = pc;//在执行之前只是把snpc给了s,将pc的位置存给snpc,静态pc并没有给dnpc的值
+  isa_exec_once(s);//执行
   cpu.pc = s->dnpc;//cpu的pc寄存器拿到下一条指令地址
 #ifdef CONFIG_ITRACE
   char *p = s->logbuf;
@@ -67,10 +67,10 @@ static void exec_once(Decode *s, vaddr_t pc) {
 #endif
 }
 
-static void execute(uint64_t n) {
-  Decode s;
+static void execute(uint64_t n) {//输入执行次数
+  Decode s;//创建Decode s结构体,执行一次创建一次
   for (;n > 0; n --) {
-    exec_once(&s, cpu.pc);
+    exec_once(&s, cpu.pc);//输入pc的地址
     g_nr_guest_inst ++;
     trace_and_difftest(&s, cpu.pc);
     if (nemu_state.state != NEMU_RUNNING) break;
@@ -88,6 +88,7 @@ static void statistic() {
 }
 
 void assert_fail_msg() {
+  printf("这个函数在cpu-exec.c中\n-------------------------------");
   isa_reg_display();
   statistic();
 }

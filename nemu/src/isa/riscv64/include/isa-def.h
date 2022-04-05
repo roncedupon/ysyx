@@ -11,7 +11,7 @@ typedef struct {
 // decode
 typedef struct {
   union {
-    uint32_t val;
+    uint32_t val;//联合体,所有共用一个
   } inst;
 } riscv64_ISADecodeInfo;
 
