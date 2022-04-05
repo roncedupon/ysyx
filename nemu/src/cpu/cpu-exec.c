@@ -41,6 +41,7 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 }
 
 static void exec_once(Decode *s, vaddr_t pc) {//获取pc的地址
+printf("当前cpu指向的地址是%lx\n",pc);
   s->pc = pc;//pc的位置--将pc当前指向的位置存入s->pc
   s->snpc = pc;//在执行之前只是把snpc给了s,将pc的位置存给snpc,静态pc并没有给dnpc的值
   isa_exec_once(s);//执行

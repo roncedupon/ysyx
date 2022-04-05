@@ -14,7 +14,7 @@ typedef struct {
 #define Mw vaddr_write//虚拟内存写,paddr应该就是物理内存读写
 //向起始地址+地址长度内存内写入数据
 enum {
-  TYPE_I, TYPE_U, TYPE_S,TYPE_J,//指令类型,好像还有J类型
+  TYPE_I, TYPE_U, TYPE_S,TYPE_J,TYPE_R,TYPE_B,//指令类型,好像还有J类型
   TYPE_N, // none
 };
 #define src1R(n) do { *src1 = R(n); } while (0)//cpu.gpr[check_reg_idx(n)]--------获取第n个寄存器的值存到src1
@@ -28,11 +28,13 @@ enum {
 //#define src1J() do {}
 
 //sext+bits:截取i[31:20]位,并且前面补零成为64bit
-static word_t immI(uint32_t i) { return SEXT(BITS(i, 31, 20), 12); }//拿到32位指令的12~31位,放低位,高位补零
+static word_t immI(uint32_t i) { return SEXT(BITS(i, 31, 20), 12); }//拿到32位指令的12~31位,放低位,高位补零,最后补成64bit
 static word_t immU(uint32_t i) { return SEXT(BITS(i, 31, 12), 20) << 12; }//获取U型指令的立即数   
 static word_t immS(uint32_t i) { return (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); }//SEXT取低length位
 static word_t immJ(uint32_t i) { return (SEXT((BITS(i,31,31)<<20)+(BITS(i,30,21)<<1)+(BITS(i,20,20)<<11)+(BITS(i,19,12)<<12),21));}
-
+static word_t Offset_B(uint32_t i){
+  return(SEXT((BITS(i,31,31)<<12)+(BITS(i,30,25)<<5)+(BITS(i,11,8)<<1)+(BITS(i,7,7)<<11),13));
+}
 /*
 
 */
@@ -47,7 +49,9 @@ static void decode_operand(Decode *s, word_t *dest, word_t *src1, word_t *src2, 
     case TYPE_I: src1R(rs1);     src2I(immI(i)); break;//如果是i型指令,拿到rs1寄存器的值,
     case TYPE_U: src1I(immU(i)); break;//
     case TYPE_S: destI(immS(i)); src1R(rs1); src2R(rs2); break;
+    case TYPE_B: src1R(rs1);src2R(rs2);break;
     case TYPE_J: src1I(immJ(i));break;//j型指令需要将pc的下一条指令存入一个寄存器里,这个寄存器由rd给出,然后pc再加上立即数实现指令的跳转
+    case TYPE_R: src1R(rs1);src2R(rs2);destI(rd);break;//注意,这里是将rs1对应的寄存器中的数据拿了出来放到src1中
   }
 }
 static int decode_exec(Decode *s) {
@@ -63,21 +67,36 @@ static int decode_exec(Decode *s) {
 //每一行最后的斜杠表示在这一行和下一行是连着的---dest=rd,src1=R[rs1],src2=R[rs2],src1,2已经是读出来的
 
   INSTPAT_START();
-  INSTPAT("??????? ????? ????? ??? ????? 00101 11", auipc     , U, R(dest) = src1 + s->pc);//这个src1相当于immU(32位指令)-
-  //auipc:pc加立即数--符号位扩展到20位立即数加到pc上,结   写入x[rd]
-  INSTPAT("??????? ????? ????? 011 ????? 00000 11", ld        , I, R(dest) = Mr(src1 + src2, 8));
-  INSTPAT("??????? ????? ????? 011 ????? 01000 11", sd        , S, Mw(src1 + dest, 8, src2));
-  //INSTPAT("",li,      
-  //li,立即数加载,使用尽可能少的指令加载立即数到x[rd]   
-  INSTPAT("??????? ????? ????? 000 ????? 00100 11", addi      , I, R(dest)=src1+src2);
-  //INSTPAT("??????? ????? ????? ??? ????? 00100 11", lui       , I, R(dest)=src1+immI(s->isa.inst.val));
-  //jal--跳转并连接--把下一条指令的地址(pc+4)存到目标寄器里，然后把pc设置为当前值加上符号位扩展的offset。
-  INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal       , J, R(dest)=s->dnpc;s->dnpc+=src1-4);//将s->dnpc+=src1-4改成s->dnpc=src1+s->pc
-  INSTPAT("??????? ????? ????? 000 ????? 11001 11", jalr      , I, word_t t=s->snpc;s->dnpc=src1+immI(s->isa.inst.val);R(dest)=t);
-  INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak    , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
-  INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv       , N, INV(s->pc));
+  //R型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("0000000 ????? ????? 000 ????? 0111011", addw     , R, R(dest) = SEXT(src1 + src2,32));//待定
+  INSTPAT("0100000 ????? ????? 000 ????? 0110011", sub      , R, R(dest) =src1 - src2);//待定
+  //I型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("???????????? ????? 011 ????? 0000011", ld        , I, R(dest) = Mr(src1 + src2, 8));
+  INSTPAT("???????????? ????? 000 ????? 0011011", addiw     , I, R(dest) = SEXT(src1+immI(s->isa.inst.val),32));
+          //li,立即数加载,使用尽可能少的指令加载立即数到x[rd]   
+  INSTPAT("???????????? ????? 000 ????? 0010011", addi      , I, R(dest)=src1+src2);
+          //auipc:pc加立即数--符号位扩展到20位立即数加到pc上,结   写入x[rd]
+  INSTPAT("???????????? ????? 000 ????? 1100111", jalr      , I, word_t t=s->snpc;s->dnpc=src1+immI(s->isa.inst.val);R(dest)=t);//immI(s->isa...)也可以写成src2
+  INSTPAT("???????????? ????? 010 ????? 0000011", lw        , I, R(dest)=SEXT(Mr(src1+immI(s->isa.inst.val),4),32) );
+  INSTPAT("???????????? ????? 011 ????? 0010011", sltiu     , I, R(dest)=src1<src2?1:0);
+  //S型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("??????? ????? ????? 011 ????? 0100011", sd       , S, Mw(src1 + dest, 8, src2));
+ 
+  //B型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("??????? ????? ????? 000 ????? 1100011", beq      , B, if(src1==src2){s->dnpc=s->pc+Offset_B(s->isa.inst.val);});
+  INSTPAT("??????? ????? ????? 001 ????? 1100011", bne      , B, if(src1!=src2){s->dnpc=s->pc+Offset_B(s->isa.inst.val);});
+
+  //U型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("???????????????????? ????? 0010111", auipc     , U, R(dest) = src1 + s->pc);//这个src1相当于immU(32位指令)-
+  //J型指令--------------------------------------------------------------------------------------------------------------
+  INSTPAT("???????????????????? ????? 1101111", jal       , J, R(dest)=s->dnpc;s->dnpc+=src1-4);//将s->dnpc+=src1-4改成s->dnpc=src1+s->pc
+          //jal--跳转并连接--把下一条指令的地址(pc+4)存到目标寄器里，然后把pc设置为当前值加上符号位扩展的offset。
+  
+  
   
 
+  INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak    , N, NEMUTRAP(s->pc, R(10))); // R(10) is $a0
+  INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv       , N, INV(s->pc));
   INSTPAT_END();
 
   R(0) = 0; // reset $zero to 0
