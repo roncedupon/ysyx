@@ -84,7 +84,7 @@
 
 //int64_t n : len;说的是他的bit长度为len,虽然它是int64_t的,然后.n=x是初始化,将结构体内的.n初始化为x
 //最后再把n补零重新变成64bit
-#define SEXT(x, len) ({ struct { int64_t n : len; } __x = { .n = x }; (int64_t)__x.n; })//
+#define SEXT(x, len) ({ struct { int64_t n : len; } __x = { .n = x }; (int64_t)__x.n; })//最后返回的是int64的__x.n
 //创建一个__x结构体,这个__x里面有一个n参数,把x赋值给这个n,并且把这个n强制转化位int64_t类型--也就是有符号位置扩展,这样来的
 #define ROUNDUP(a, sz)   ((((uintptr_t)a) + (sz) - 1) & ~((sz) - 1))
 #define ROUNDDOWN(a, sz) ((((uintptr_t)a)) & ~((sz) - 1))
