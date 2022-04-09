@@ -70,7 +70,7 @@
 //
 #define BITMASK(bits) ((1ull << (bits)) - 1)//unsigned long long 64bit~8B
 #define BITS(x, hi, lo) (((x) >> (lo)) & BITMASK((hi) - (lo) + 1)) // similar to x[hi:lo] in verilog
-/* 
+/*src1 1000000000000000000000000100023
 0000_0000_1110_0001---x  BITS(x, 8, 5)
 0000_0000_0000_0111---右移5(lo)位⭐
 0000_0000_0000_0001---1ull
