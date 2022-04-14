@@ -4,7 +4,10 @@
 // this is not consistent with uint8_t
 // but it is ok since we do not access the array directly
 static const uint32_t img [] = {//32位无符号
-  0x00000297,  // auipc t0,0//这是汇编语言,没学过
+//因为这里面存的是32位无符号数,也就是一个img元素占4字节,由于cpu的地址是十六进制表示的,所以cpu每次都要加四
+//在取指的时候还会输入指令的长度,
+//指令长度分别有1,2,4,8字节的选择,nemu/include/memory/host.h这里面有详细说明
+  0x00000297,  // auipc t0,0
   0x0002b823,  // sd  zero,16(t0)
   0x0102b503,  // ld  a0,16(t0)
   0x00100073,  // ebreak (used as nemu_trap)

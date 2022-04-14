@@ -10,6 +10,7 @@ static uint8_t pmem[CONFIG_MSIZE] PG_ALIGN = {};
 #endif
 
 uint8_t* guest_to_host(paddr_t paddr) { return pmem + paddr - CONFIG_MBASE; }
+//程序地址和pc地址的问题? TODO
 paddr_t host_to_guest(uint8_t *haddr) { return haddr - pmem + CONFIG_MBASE; }
 
 static word_t pmem_read(paddr_t addr, int len) {
@@ -44,7 +45,10 @@ void init_mem() {
 
 word_t paddr_read(paddr_t addr, int len) {//qis
 //应该是返回(起始地址+长度)的内存中的内容
-  if (likely(in_pmem(addr))) return pmem_read(addr, len);
+  if (likely(in_pmem(addr))) return pmem_read(addr, len);//likely对应cpu得分支预测
+  //这里不是什么分支预测,只是判断有没有超出内存罢了..
+  //https://zhuanlan.zhihu.com/p/357434227
+  //likely，用于修饰if/else if分支，表示该分支的条件更有可能被满足。而unlikely与之相反
   IFDEF(CONFIG_DEVICE, return mmio_read(addr, len));
   out_of_bound(addr);
   return 0;

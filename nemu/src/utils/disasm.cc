@@ -2,7 +2,12 @@
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
 #endif
-
+//cc文件是Linux/Unix下为C++源文件的默认扩展名。
+/*
+NEMU已经实现了一个简单的踪迹功能 -- itrace (instruction trace), 
+它可以记录客户程序执行的每一条指令. itrace的实现很简单, 代码只要记录instr_fetch()取到的每一条指令, 
+然后调用llvm项目提供的反汇编功能(在nemu/src/utils/disasm.cc中实现). 
+*/
 #include "llvm/MC/MCAsmInfo.h"
 #include "llvm/MC/MCContext.h"
 #include "llvm/MC/MCDisassembler/MCDisassembler.h"
@@ -21,6 +26,12 @@ static llvm::MCSubtargetInfo *gSTI = nullptr;
 static llvm::MCInstPrinter *gIP = nullptr;
 
 extern "C" void init_disasm(const char *triple) {
+/*
+extern "C"的主要作用就是为了能够正确实现C++代码调用其他C语言代码。加上extern "C"后，
+会指示编译器这部分代码按C语言的进行编译，而不是C++的。由于C++支持函数重载，
+因此编译器编译函数的过程中会将函数的参数类型也加到编译后的代码中，而不仅仅是函数名；
+而C语言并不支持函数重载，因此编译C语言代码的函数时不会带上函数的参数类型，一般只包括函数名。
+*/
   llvm::InitializeAllTargetInfos();
   llvm::InitializeAllTargetMCs();
   llvm::InitializeAllAsmParsers();

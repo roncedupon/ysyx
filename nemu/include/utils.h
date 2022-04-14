@@ -56,7 +56,21 @@ uint64_t get_time();
   do { \
     printf(__VA_ARGS__); \
     log_write(__VA_ARGS__); \
-  } while (0)
+  } while (0)//__VA_ARGS__:用于在宏替换部分中，表示可变参数列表；
+/*
 
+#include <iostream>
+ 
+#define LOG(...)  printf(__VA_ARGS__);
+ 
+int main()
+{
+    LOG("score is %d\n",96);
+ 
+    getchar();
+    return 0;
+}
+
+*/
 
 #endif
