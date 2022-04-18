@@ -51,18 +51,18 @@ uint64_t get_time();
     } \
   } while (0) \
 )
-
+//fprintf向指定流写入格式化输入
+//fflush是一个在C语言标准输入输出库中的函数，功能是冲洗流中的信息，
+//该函数通常用于处理磁盘文件。fflush()会强迫将缓冲区内的数据写回参数stream 指定的文件中。
 #define _Log(...) \
   do { \
     printf(__VA_ARGS__); \
     log_write(__VA_ARGS__); \
-  } while (0)//__VA_ARGS__:用于在宏替换部分中，表示可变参数列表；
+  } while (0)//__VA_ARGS__:用于在宏替换部分中，表示可变参数列表；,栗子如下
 /*
 
 #include <iostream>
- 
 #define LOG(...)  printf(__VA_ARGS__);
- 
 int main()
 {
     LOG("score is %d\n",96);

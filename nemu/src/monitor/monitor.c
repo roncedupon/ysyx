@@ -26,7 +26,7 @@ static void welcome() {
 
 void sdb_set_batch_mode();
 
-static char *log_file = NULL;
+static char *log_file = NULL;//这个log_file好像是在makefile被修改的
 static char *diff_so_file = NULL;
 static char *img_file = NULL;
 static int difftest_port = 1234;
@@ -91,7 +91,7 @@ void init_monitor(int argc, char *argv[]) {
 
   /* Set random seed. */
   init_rand();
-
+  printf("log文件目录%s--------------\n",log_file);
   /* Open the log file. */
   init_log(log_file);
 

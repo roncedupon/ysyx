@@ -37,8 +37,10 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
     nemu_state.state=NEMU_STOP;
   }
   
-  
 }
+
+//指令环形缓冲区
+
 
 static void exec_once(Decode *s, vaddr_t pc) {//获取pc的地址
 printf("当前cpu指向的地址是%lx\n",pc);
@@ -47,14 +49,21 @@ printf("当前cpu指向的地址是%lx\n",pc);
   isa_exec_once(s);//执行
   cpu.pc = s->dnpc;//cpu的pc寄存器拿到下一条指令地址
 #ifdef CONFIG_ITRACE
-  char *p = s->logbuf;
-  p += snprintf(p, sizeof(s->logbuf), FMT_WORD ":", s->pc);
-  int ilen = s->snpc - s->pc;
+  char *p = s->logbuf;//log_buf[128]
+  p += snprintf(p, sizeof(s->logbuf), FMT_WORD ":", s->pc);//这里将指令记录到log里
+//C 库函数 int snprintf(char *str, size_t size, const char *format, ...)
+// 设将可变参数(...)按照 format 格式化成字符串，
+//并将字符串复制到 str 中，size 为要写入的字符的最大数目，超过 size 会被截断。
+//返回值是本来要写入的字符串长度(实际长度加一(\0结束符))
+//https://www.runoob.com/cprogramming/c-function-snprintf.html
+  int ilen = s->snpc - s->pc;//指令长度
   int i;
   uint8_t *inst = (uint8_t *)&s->isa.inst.val;
   for (i = 0; i < ilen; i ++) {
     p += snprintf(p, 4, " %02x", inst[i]);
+    printf("-------------------------写入log");//log
   }
+  printf("----------------------------4log写入完成");
   int ilen_max = MUXDEF(CONFIG_ISA_x86, 8, 4);
   int space_len = ilen_max - ilen;
   if (space_len < 0) space_len = 0;
@@ -64,7 +73,7 @@ printf("当前cpu指向的地址是%lx\n",pc);
 
   void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
-      MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen);
+      MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen);//反汇编指令
 #endif
 }
 
