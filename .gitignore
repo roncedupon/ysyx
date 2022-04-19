@@ -1,4 +1,6 @@
-
+*.*
+*
+!*/
 !/nemu/*
 !/python_workspace/*
 !/nexus-am/*
@@ -15,4 +17,3 @@
 /fceux-am
 /蜂鸟
 /gemmini
-/spinalhdl_VexRiscv
