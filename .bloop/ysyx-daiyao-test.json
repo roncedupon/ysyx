@@ -1,0 +1,161 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "ysyx-daiyao-test",
+        "directory": "/home/dy/ysyx-daiyao",
+        "workspaceDir": "/home/dy/ysyx-daiyao",
+        "sources": [
+            "/home/dy/ysyx-daiyao/src/test/scala",
+            "/home/dy/ysyx-daiyao/src/test/scala-2.12",
+            "/home/dy/ysyx-daiyao/src/test/scala-2",
+            "/home/dy/ysyx-daiyao/src/test/java",
+            "/home/dy/ysyx-daiyao/target/scala-2.12/src_managed/test"
+        ],
+        "dependencies": [
+            "ysyx-daiyao"
+        ],
+        "classpath": [
+            "/home/dy/ysyx-daiyao/.bloop/ysyx-daiyao/scala-2.12/classes",
+            "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+        ],
+        "out": "/home/dy/ysyx-daiyao/.bloop/ysyx-daiyao",
+        "classesDir": "/home/dy/ysyx-daiyao/.bloop/ysyx-daiyao/scala-2.12/test-classes",
+        "resources": [
+            "/home/dy/ysyx-daiyao/src/test/resources",
+            "/home/dy/ysyx-daiyao/target/scala-2.12/resource_managed/test"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.15",
+            "options": [
+                
+            ],
+            "jars": [
+                "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar",
+                "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-reflect.jar",
+                "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-compiler.jar",
+                "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-xml_2.12.jar",
+                "/home/dy/.sbt/boot/scala-2.12.15/lib/jline.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/usr/lib/jvm/java-16-openjdk-amd64",
+                "options": [
+                    "-Duser.dir=/home/dy/ysyx-daiyao"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.15",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "5e789d895ee2b8b02577db7b6bbb5409798b7daf"
+                            },
+                            "path": "/home/dy/.cache/coursier/v1/https/maven.aliyun.com/repository/central/org/scala-lang/scala-library/2.12.15/scala-library-2.12.15-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.15",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "checksum": {
+                                "type": "sha1",
+                                "digest": "5e789d895ee2b8b02577db7b6bbb5409798b7daf"
+                            },
+                            "path": "/home/dy/.cache/coursier/v1/https/maven.aliyun.com/repository/central/org/scala-lang/scala-library/2.12.15/scala-library-2.12.15-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

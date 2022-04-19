@@ -1,0 +1,567 @@
+[Trace - 01:45:02 PM] Sending request 'build/initialize - (1)'
+Params: {
+  "rootUri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/",
+  "displayName": "Metals",
+  "version": "0.11.2+125-ed5fb2f2-SNAPSHOT",
+  "bspVersion": "2.0.0+70-f6e47d42-SNAPSHOT",
+  "capabilities": {
+    "languageIds": [
+      "scala",
+      "java"
+    ]
+  },
+  "data": {
+    "javaSemanticdbVersion": "0.7.4",
+    "semanticdbVersion": "4.5.0",
+    "supportedScalaVersions": [
+      "2.13.8",
+      "2.12.15",
+      "2.12.14",
+      "2.12.13",
+      "2.12.12",
+      "2.12.11",
+      "2.13.5",
+      "2.13.6",
+      "2.13.7",
+      "2.11.12",
+      "2.12.8",
+      "2.12.9",
+      "2.12.10",
+      "2.13.1",
+      "2.13.2",
+      "2.13.3",
+      "2.13.4"
+    ]
+  }
+}
+
+
+[Trace - 01:45:02 PM] Received response 'build/initialize - (1)' in 41ms
+Result: {
+  "displayName": "bloop",
+  "version": "1.4.13-50-8332ee9c",
+  "bspVersion": "2.0.0-M13",
+  "capabilities": {
+    "compileProvider": {
+      "languageIds": [
+        "scala",
+        "java"
+      ]
+    },
+    "testProvider": {
+      "languageIds": [
+        "scala",
+        "java"
+      ]
+    },
+    "runProvider": {
+      "languageIds": [
+        "scala",
+        "java"
+      ]
+    },
+    "inverseSourcesProvider": true,
+    "dependencySourcesProvider": true,
+    "resourcesProvider": true,
+    "buildTargetChangedProvider": false,
+    "jvmRunEnvironmentProvider": true,
+    "jvmTestEnvironmentProvider": true,
+    "canReload": false
+  }
+}
+Error: null
+
+
+[Trace - 01:45:02 PM] Sending notification 'build/initialized'
+Params: null
+
+
+[Trace - 01:45:02 PM] Sending request 'workspace/buildTargets - (2)'
+Params: null
+
+
+[Trace - 01:45:02 PM] Received response 'workspace/buildTargets - (2)' in 7ms
+Result: {
+  "targets": [
+    {
+      "id": {
+        "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+      },
+      "displayName": "spinalhdl_nemu-build",
+      "baseDirectory": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/",
+      "tags": [
+        "library"
+      ],
+      "languageIds": [
+        "scala",
+        "java"
+      ],
+      "dependencies": [],
+      "capabilities": {
+        "canCompile": true,
+        "canTest": true,
+        "canRun": true,
+        "canDebug": false
+      },
+      "dataKind": "sbt",
+      "data": {
+        "sbtVersion": "1.6.2",
+        "autoImports": [
+          "import _root_.scala.xml.{TopScope\u003d\u003e$scope}",
+          "import _root_.sbt._",
+          "import _root_.sbt.Keys._",
+          "import _root_.sbt.nio.Keys._",
+          "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.JUnitXmlReportPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._",
+          "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin"
+        ],
+        "scalaBuildTarget": {
+          "scalaOrganization": "org.scala-lang",
+          "scalaVersion": "2.12.15",
+          "scalaBinaryVersion": "2.12",
+          "platform": 1,
+          "jars": [
+            "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar",
+            "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-reflect.jar",
+            "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-compiler.jar",
+            "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-xml_2.12.jar",
+            "file:///home/dy/.sbt/boot/scala-2.12.15/lib/jline.jar"
+          ],
+          "jvmBuildTarget": {
+            "javaHome": "file:///usr/lib/jvm/java-16-openjdk-amd64/"
+          }
+        },
+        "children": []
+      }
+    }
+  ]
+}
+Error: null
+
+
+[Trace - 01:45:02 PM] Sending request 'buildTarget/scalacOptions - (3)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+    }
+  ]
+}
+
+
+[Trace - 01:45:02 PM] Received response 'buildTarget/scalacOptions - (3)' in 6ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+      },
+      "options": [
+        "-P:semanticdb:sourceroot:/home/dy/ysyx-daiyao/spinalhdl_nemu/project",
+        "-deprecation",
+        "-Wconf:cat\u003dunused-nowarn:s",
+        "-Xsource:3",
+        "-Yrangepos",
+        "-P:semanticdb:failures:warning",
+        "-P:semanticdb:synthetics:on",
+        "-Xplugin-require:semanticdb",
+        "-Xplugin:/home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/semanticdb-scalac_2.12.15/4.5.0/semanticdb-scalac_2.12.15-4.5.0.jar"
+      ],
+      "classpath": [
+        "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/.bloop/spinalhdl_nemu-build/bloop-bsp-clients-classes/classes-Metals-UvlQYmlVSje45aCRSCOovg\u003d\u003d/",
+        "file:///home/dy/.cache/bloop/semanticdb/com.sourcegraph.semanticdb-javac.0.7.4/semanticdb-javac-0.7.4.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.6.2/sbt-1.6.2.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.4.13-50-8332ee9c/sbt-bloop-1.4.13-50-8332ee9c.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.6.2/main_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.6.0/io_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.8.0/jna-platform-5.8.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.7/gson-2.7.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/logic_2.12/1.6.2/logic_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/actions_2.12/1.6.2/actions_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main-settings_2.12/1.6.2/main-settings_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/run_2.12/1.6.2/run_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/command_2.12/1.6.2/command_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/collections_2.12/1.6.2/collections_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/scripted-plugin_2.12/1.6.2/scripted-plugin_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-lm-integration_2.12/1.6.2/zinc-lm-integration_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-logging_2.12/1.6.2/util-logging_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.3.0/scala-xml_2.12-1.3.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.3.3/launcher-interface-1.3.3.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/ben-manes/caffeine/caffeine/2.8.5/caffeine-2.8.5.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/get-coursier/lm-coursier-shaded_2.12/2.0.10/lm-coursier-shaded_2.12-2.0.10.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.1/log4j-slf4j-impl-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-core_2.12/1.6.1/librarymanagement-core_2.12-1.6.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-ivy_2.12/1.6.1/librarymanagement-ivy_2.12-1.6.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.6.0/compiler-interface-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile_2.12/1.6.0/zinc-compile_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/swoval/file-tree-views/2.1.7/file-tree-views-2.1.7.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-relation_2.12/1.6.2/util-relation_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/completion_2.12/1.6.2/completion_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/task-system_2.12/1.6.2/task-system_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/tasks_2.12/1.6.2/tasks_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/testing_2.12/1.6.2/testing_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-tracking_2.12/1.6.2/util-tracking_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-scalajson_2.12/0.9.1/sjson-new-scalajson_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classpath_2.12/1.6.0/zinc-classpath_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-apiinfo_2.12/1.6.0/zinc-apiinfo_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc_2.12/1.6.0/zinc_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/core-macros_2.12/1.6.2/core-macros_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-cache_2.12/1.6.2/util-cache_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-control_2.12/1.6.2/util-control_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/protocol_2.12/1.6.2/protocol_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-core_2.12/0.9.1/sjson-new-core_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/template-resolver/0.1/template-resolver-0.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-position_2.12/1.6.2/util-position_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile-core_2.12/1.6.0/zinc-compile-core_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.6.2/util-interface-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/jline/jline/2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493/jline-2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jansi/3.19.0/jline-terminal-jansi-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-reflect.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.4.1/checker-qual-3.4.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.4.0/error_prone_annotations-2.4.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.6.0/scala-collection-compat_2.12-2.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-compiler.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-okhttp_2.12/0.5.0/gigahorse-okhttp_2.12-0.5.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp-urlconnection/3.7.0/okhttp-urlconnection-3.7.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745/ivy-2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.19.0/jline-reader-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-builtins/3.19.0/jline-builtins-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-agent/1.6.2/test-agent-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-jawn-parser_2.12/0.9.1/shaded-jawn-parser_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.6.0/compiler-bridge_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classfile_2.12/1.6.0/zinc-classfile_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-core_2.12/1.6.0/zinc-core_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist_2.12/1.6.0/zinc-persist_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-murmurhash_2.12/0.9.1/sjson-new-murmurhash_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ipcsocket/ipcsocket/1.3.1/ipcsocket-1.3.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/zero-allocation-hashing/0.10.1/zero-allocation-hashing-0.10.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/fusesource/jansi/jansi/2.1.0/jansi-2.1.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-core_2.12/0.5.0/gigahorse-core_2.12-0.5.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-style/3.19.0/jline-style-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist-core-assembly/1.6.0/zinc-persist-core-assembly-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.4.0/ssl-config-core_2.12-0.4.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3.jar"
+      ],
+      "classDirectory": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/.bloop/spinalhdl_nemu-build/bloop-bsp-clients-classes/classes-Metals-UvlQYmlVSje45aCRSCOovg\u003d\u003d/"
+    }
+  ]
+}
+Error: null
+
+
+[Trace - 01:45:02 PM] Sending request 'buildTarget/javacOptions - (4)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+    }
+  ]
+}
+
+
+[Trace - 01:45:02 PM] Received response 'buildTarget/javacOptions - (4)' in 6ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+      },
+      "options": [
+        "-Xplugin:semanticdb -sourceroot:/home/dy/ysyx-daiyao/spinalhdl_nemu/project -targetroot:javac-classes-directory"
+      ],
+      "classpath": [
+        "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/.bloop/spinalhdl_nemu-build/bloop-bsp-clients-classes/classes-Metals-UvlQYmlVSje45aCRSCOovg\u003d\u003d/",
+        "file:///home/dy/.cache/bloop/semanticdb/com.sourcegraph.semanticdb-javac.0.7.4/semanticdb-javac-0.7.4.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.6.2/sbt-1.6.2.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-library.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.4.13-50-8332ee9c/sbt-bloop-1.4.13-50-8332ee9c.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.6.2/main_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.6.0/io_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.8.0/jna-platform-5.8.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.7/gson-2.7.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/logic_2.12/1.6.2/logic_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/actions_2.12/1.6.2/actions_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main-settings_2.12/1.6.2/main-settings_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/run_2.12/1.6.2/run_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/command_2.12/1.6.2/command_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/collections_2.12/1.6.2/collections_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/scripted-plugin_2.12/1.6.2/scripted-plugin_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-lm-integration_2.12/1.6.2/zinc-lm-integration_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-logging_2.12/1.6.2/util-logging_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.3.0/scala-xml_2.12-1.3.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.3.3/launcher-interface-1.3.3.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/ben-manes/caffeine/caffeine/2.8.5/caffeine-2.8.5.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/get-coursier/lm-coursier-shaded_2.12/2.0.10/lm-coursier-shaded_2.12-2.0.10.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.1/log4j-slf4j-impl-2.17.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-core_2.12/1.6.1/librarymanagement-core_2.12-1.6.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-ivy_2.12/1.6.1/librarymanagement-ivy_2.12-1.6.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.6.0/compiler-interface-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile_2.12/1.6.0/zinc-compile_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/swoval/file-tree-views/2.1.7/file-tree-views-2.1.7.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-relation_2.12/1.6.2/util-relation_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/completion_2.12/1.6.2/completion_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/task-system_2.12/1.6.2/task-system_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/tasks_2.12/1.6.2/tasks_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/testing_2.12/1.6.2/testing_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-tracking_2.12/1.6.2/util-tracking_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-scalajson_2.12/0.9.1/sjson-new-scalajson_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classpath_2.12/1.6.0/zinc-classpath_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-apiinfo_2.12/1.6.0/zinc-apiinfo_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc_2.12/1.6.0/zinc_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/core-macros_2.12/1.6.2/core-macros_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-cache_2.12/1.6.2/util-cache_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-control_2.12/1.6.2/util-control_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/protocol_2.12/1.6.2/protocol_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-core_2.12/0.9.1/sjson-new-core_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/template-resolver/0.1/template-resolver-0.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-position_2.12/1.6.2/util-position_2.12-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile-core_2.12/1.6.0/zinc-compile-core_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.6.2/util-interface-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/jline/jline/2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493/jline-2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jansi/3.19.0/jline-terminal-jansi-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-reflect.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.4.1/checker-qual-3.4.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.4.0/error_prone_annotations-2.4.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.6.0/scala-collection-compat_2.12-2.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar",
+        "file:///home/dy/.sbt/boot/scala-2.12.15/lib/scala-compiler.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-okhttp_2.12/0.5.0/gigahorse-okhttp_2.12-0.5.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp-urlconnection/3.7.0/okhttp-urlconnection-3.7.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745/ivy-2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.19.0/jline-reader-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-builtins/3.19.0/jline-builtins-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-agent/1.6.2/test-agent-1.6.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-jawn-parser_2.12/0.9.1/shaded-jawn-parser_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.6.0/compiler-bridge_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classfile_2.12/1.6.0/zinc-classfile_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-core_2.12/1.6.0/zinc-core_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist_2.12/1.6.0/zinc-persist_2.12-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-murmurhash_2.12/0.9.1/sjson-new-murmurhash_2.12-0.9.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ipcsocket/ipcsocket/1.3.1/ipcsocket-1.3.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/zero-allocation-hashing/0.10.1/zero-allocation-hashing-0.10.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/fusesource/jansi/jansi/2.1.0/jansi-2.1.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-core_2.12/0.5.0/gigahorse-core_2.12-0.5.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-style/3.19.0/jline-style-3.19.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist-core-assembly/1.6.0/zinc-persist-core-assembly-1.6.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.4.0/ssl-config-core_2.12-0.4.0.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3.jar"
+      ],
+      "classDirectory": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/.bloop/spinalhdl_nemu-build/bloop-bsp-clients-classes/classes-Metals-UvlQYmlVSje45aCRSCOovg\u003d\u003d/"
+    }
+  ]
+}
+Error: null
+
+
+[Trace - 01:45:02 PM] Sending request 'buildTarget/sources - (5)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+    }
+  ]
+}
+
+
+[Trace - 01:45:02 PM] Received response 'buildTarget/sources - (5)' in 7ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+      },
+      "sources": [
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/src/main/scala/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/src/main/scala-2.12/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/src/main/scala-2/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/src/main/java/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/src/main/scala-sbt-1.0/",
+          "kind": 2,
+          "generated": false
+        },
+        {
+          "uri": "file:///home/dy/ysyx-daiyao/spinalhdl_nemu/project/target/scala-2.12/sbt-1.0/src_managed/main/",
+          "kind": 2,
+          "generated": false
+        }
+      ]
+    }
+  ]
+}
+Error: null
+
+
+[Trace - 01:45:02 PM] Sending request 'buildTarget/dependencySources - (6)'
+Params: {
+  "targets": [
+    {
+      "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+    }
+  ]
+}
+
+
+[Trace - 01:45:02 PM] Received response 'buildTarget/dependencySources - (6)' in 8ms
+Result: {
+  "items": [
+    {
+      "target": {
+        "uri": "file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/?id\u003dspinalhdl_nemu-build"
+      },
+      "sources": [
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/1.4.13-50-8332ee9c/sbt-bloop-1.4.13-50-8332ee9c-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.7/gson-2.7-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.6.2/sbt-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.15/scala-library-2.12.15-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.6.2/main_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.6.0/io_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.8.0/jna-5.8.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.8.0/jna-platform-5.8.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/logic_2.12/1.6.2/logic_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/actions_2.12/1.6.2/actions_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main-settings_2.12/1.6.2/main-settings_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/run_2.12/1.6.2/run_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/command_2.12/1.6.2/command_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/collections_2.12/1.6.2/collections_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/scripted-plugin_2.12/1.6.2/scripted-plugin_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-lm-integration_2.12/1.6.2/zinc-lm-integration_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-logging_2.12/1.6.2/util-logging_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.3.0/scala-xml_2.12-1.3.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/launcher-interface/1.3.3/launcher-interface-1.3.3-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/ben-manes/caffeine/caffeine/2.8.5/caffeine-2.8.5-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/io/get-coursier/lm-coursier-shaded_2.12/2.0.10/lm-coursier-shaded_2.12-2.0.10-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.1/log4j-slf4j-impl-2.17.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-core_2.12/1.6.1/librarymanagement-core_2.12-1.6.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/librarymanagement-ivy_2.12/1.6.1/librarymanagement-ivy_2.12-1.6.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.6.0/compiler-interface-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile_2.12/1.6.0/zinc-compile_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/swoval/file-tree-views/2.1.7/file-tree-views-2.1.7-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-relation_2.12/1.6.2/util-relation_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/completion_2.12/1.6.2/completion_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/task-system_2.12/1.6.2/task-system_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/tasks_2.12/1.6.2/tasks_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/testing_2.12/1.6.2/testing_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-tracking_2.12/1.6.2/util-tracking_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-scalajson_2.12/0.9.1/sjson-new-scalajson_2.12-0.9.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal/3.19.0/jline-terminal-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classpath_2.12/1.6.0/zinc-classpath_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-apiinfo_2.12/1.6.0/zinc-apiinfo_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc_2.12/1.6.0/zinc_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/core-macros_2.12/1.6.2/core-macros_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-cache_2.12/1.6.2/util-cache_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-control_2.12/1.6.2/util-control_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/protocol_2.12/1.6.2/protocol_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-core_2.12/0.9.1/sjson-new-core_2.12-0.9.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/template-resolver/0.1/template-resolver-0.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-position_2.12/1.6.2/util-position_2.12-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-compile-core_2.12/1.6.0/zinc-compile-core_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.6.2/util-interface-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/jline/jline/2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493/jline-2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jansi/3.19.0/jline-terminal-jansi-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lmax/disruptor/3.4.2/disruptor-3.4.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.15/scala-reflect-2.12.15-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.4.1/checker-qual-3.4.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.4.0/error_prone_annotations-2.4.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.6.0/scala-collection-compat_2.12-2.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.15/scala-compiler-2.12.15-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-okhttp_2.12/0.5.0/gigahorse-okhttp_2.12-0.5.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp-urlconnection/3.7.0/okhttp-urlconnection-3.7.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745/ivy-2.3.0-sbt-fbc4f586aeeb1591710b14eb4f41b94880dcd745-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-reader/3.19.0/jline-reader-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-builtins/3.19.0/jline-builtins-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-agent/1.6.2/test-agent-1.6.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-jawn-parser_2.12/0.9.1/shaded-jawn-parser_2.12-0.9.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.6.0/compiler-bridge_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-classfile_2.12/1.6.0/zinc-classfile_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-core_2.12/1.6.0/zinc-core_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist_2.12/1.6.0/zinc-persist_2.12-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/sjson-new-murmurhash_2.12/0.9.1/sjson-new-murmurhash_2.12-0.9.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ipcsocket/ipcsocket/1.3.1/ipcsocket-1.3.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/net/openhft/zero-allocation-hashing/0.10.1/zero-allocation-hashing-0.10.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/fusesource/jansi/jansi/2.1.0/jansi-2.1.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-core_2.12/0.5.0/gigahorse-core_2.12-0.5.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-style/3.19.0/jline-style-3.19.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/zinc-persist-core-assembly/1.6.0/zinc-persist-core-assembly-1.6.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.12/0.4.0/ssl-config-core_2.12-0.4.0-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/squareup/okio/okio/1.17.2/okio-1.17.2-sources.jar",
+        "file:///home/dy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3-sources.jar"
+      ]
+    }
+  ]
+}
+Error: null
+
+
+[Trace - 01:50:19 PM] Sending request 'build/shutdown - (7)'
+Params: null
+
+
+[Trace - 01:50:19 PM] Received response 'build/shutdown - (7)' in 13ms
+Result: {}
+Error: null
+
+
+[Trace - 01:50:19 PM] Sending notification 'build/exit'
+Params: null
+
+

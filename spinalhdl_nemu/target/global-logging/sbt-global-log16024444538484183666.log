@@ -1,0 +1,87 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+[debug] Load.defaultLoad until apply took 775.794752ms
+[debug]                 Load.loadUnit: plugins took 194.165403ms
+[debug]                 Load.loadUnit: defsScala took 0.262942ms
+[debug] [Loading] Scanning directory /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+[debug]                   Load.loadUnit: mkEval took 12.059989ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 43.533223 ms
+[info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(spinalhdl_nemu-build-build) took 43.600748ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id spinalhdl_nemu-build-build, base: /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project, plugins: List(<none>))) took 102.499074ms
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project, returning: (spinalhdl_nemu-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 4458.428525ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 14.832576ms
+[debug]               Load.loadUnit(file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/project/, ...) took 4679.428675ms
+[debug]             Load.apply: load took 4867.323257ms
+[debug]             Load.apply: resolveProjects took 7.560472ms
+[debug]             Load.apply: finalTransforms took 163.286141ms
+[debug]             Load.apply: config.delegates took 11.98024ms
+[debug]             Load.apply: Def.make(settings)... took 1113.505558ms
+[debug]             Load.apply: structureIndex took 220.184684ms
+[debug]             Load.apply: mkStreams took 1.371185ms
+[info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 9517.453537ms
+[debug]           Load.loadUnit: defsScala took 0.004899ms
+[debug] [Loading] Scanning directory /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+[debug]             Load.loadUnit: mkEval took 0.207939ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/spinalhdl_nemu/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 3.92374 ms
+[info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+[debug]               Load.resolveProject(spinalhdl_nemu-build) took 36.980495ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id spinalhdl_nemu-build, base: /home/dy/ysyx-daiyao/spinalhdl_nemu/project, plugins: List(<none>))) took 41.988583ms
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/spinalhdl_nemu/project, returning: (spinalhdl_nemu-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1894.552153ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.431647ms
+[debug]         Load.loadUnit(file:/home/dy/ysyx-daiyao/spinalhdl_nemu/project/, ...) took 11414.064311ms
+[debug]       Load.apply: load took 11418.395473ms
+[debug]       Load.apply: resolveProjects took 0.141796ms
+[debug]       Load.apply: finalTransforms took 50.5509ms
+[debug]       Load.apply: config.delegates took 0.461904ms
+[debug]       Load.apply: Def.make(settings)... took 262.229081ms
+[debug]       Load.apply: structureIndex took 72.866602ms
+[debug]       Load.apply: mkStreams took 0.002755ms
+[info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+[debug] Evaluating tasks: bloopInstall
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

@@ -1,0 +1,656 @@
+2022.04.14 18:21:04 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/lsp.trace.json or /home/dy/.cache/metals/lsp.trace.json
+2022.04.14 18:21:05 INFO  logging to file /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/metals.log
+2022.04.14 18:21:05 INFO  Started: Metals version 0.11.2+125-ed5fb2f2-SNAPSHOT in workspace '/home/dy/ysyx-daiyao/spinalhdl_nemu' for client Visual Studio Code 1.66.2.
+2022.04.14 18:21:05 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(16)), jdkHome: /usr/lib/jvm/java-16-openjdk-amd64, javac exists: false)
+2022.04.14 18:21:07 INFO  time: initialize in 1.82s
+2022.04.14 18:21:07 WARN  Build server is not auto-connectable.
+2022.04.14 18:21:14 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals3468989782134268270/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.14 18:21:14 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/project/metals.sbt
+2022.04.14 18:21:14 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project/metals.sbt
+2022.04.14 18:21:14 INFO  skipping build import with status 'Started'
+2022.04.14 18:21:17 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.14 18:21:21 INFO  no build target found for /home/dy/ysyx-daiyao/spinalhdl_nemu/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.1.1
+2022.04.14 18:21:22 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.14 18:21:24 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.14 18:21:25 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:21:26 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/mem.scala
+2022.04.14 18:21:27 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/register.scala
+2022.04.14 18:21:28 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/vcodegen.scala
+2022.04.14 18:21:29 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.14 18:21:29 INFO  time: code lens generation in 2.56s
+2022.04.14 18:21:29 INFO  time: code lens generation in 1.43s
+2022.04.14 18:21:29 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.14 18:21:35 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:21:38 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:21:40 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:21:50 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:21:57 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:22:11 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:22:17 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:22:23 INFO  user cancelled sbt bloopInstall
+2022.04.14 18:22:23 INFO  time: ran 'sbt bloopInstall' in 1m9s
+2022.04.14 18:22:25 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:22:29 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/register.scala
+2022.04.14 18:22:33 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+2022.04.14 18:25:52 INFO  shutting down Metals
+2022.04.15 00:09:24 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/lsp.trace.json or /home/dy/.cache/metals/lsp.trace.json
+2022.04.15 00:09:25 INFO  logging to file /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/metals.log
+2022.04.15 00:09:25 INFO  Started: Metals version 0.11.2+125-ed5fb2f2-SNAPSHOT in workspace '/home/dy/ysyx-daiyao/spinalhdl_nemu' for client Visual Studio Code 1.66.2.
+2022.04.15 00:09:25 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(16)), jdkHome: /usr/lib/jvm/java-16-openjdk-amd64, javac exists: false)
+2022.04.15 00:09:27 INFO  time: initialize in 1.88s
+2022.04.15 00:09:27 WARN  Build server is not auto-connectable.
+2022.04.15 00:09:28 INFO  skipping build import with status 'Cancelled'
+2022.04.15 00:09:30 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+Apr 15, 2022 12:09:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Apr 15, 2022 12:09:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Apr 15, 2022 12:09:30 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2022.04.15 00:09:38 INFO  no build target found for /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala. Using presentation compiler with project's scala-library version: 3.1.1
+2022.04.15 00:09:40 INFO  time: code lens generation in 9.65s
+2022.04.15 03:49:57 INFO  shutting down Metals
+2022.04.15 18:02:07 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/lsp.trace.json or /home/dy/.cache/metals/lsp.trace.json
+2022.04.15 18:02:07 INFO  logging to file /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/metals.log
+2022.04.15 18:02:07 INFO  Started: Metals version 0.11.2+125-ed5fb2f2-SNAPSHOT in workspace '/home/dy/ysyx-daiyao/spinalhdl_nemu' for client Visual Studio Code 1.66.2.
+2022.04.15 18:02:07 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(16)), jdkHome: /usr/lib/jvm/java-16-openjdk-amd64, javac exists: false)
+2022.04.15 18:02:09 INFO  time: initialize in 1.83s
+2022.04.15 18:02:09 WARN  Build server is not auto-connectable.
+2022.04.15 18:02:10 INFO  skipping build import with status 'Cancelled'
+2022.04.15 18:02:12 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+Apr 15, 2022 6:02:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Apr 15, 2022 6:02:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2022.04.15 18:02:18 INFO  no build target found for /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala. Using presentation compiler with project's scala-library version: 3.1.1
+2022.04.15 18:02:20 INFO  time: code lens generation in 5.61s
+2022.04.15 18:02:20 INFO  time: code lens generation in 7.71s
+2022.04.15 18:04:31 INFO  shutting down Metals
+2022.04.19 13:25:59 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/lsp.trace.json or /home/dy/.cache/metals/lsp.trace.json
+2022.04.19 13:26:00 INFO  logging to file /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/metals.log
+2022.04.19 13:26:00 INFO  Started: Metals version 0.11.2+125-ed5fb2f2-SNAPSHOT in workspace '/home/dy/ysyx-daiyao/spinalhdl_nemu' for client Visual Studio Code 1.66.2.
+2022.04.19 13:26:00 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(16)), jdkHome: /usr/lib/jvm/java-16-openjdk-amd64, javac exists: false)
+2022.04.19 13:26:02 INFO  time: initialize in 2.22s
+2022.04.19 13:26:02 WARN  Build server is not auto-connectable.
+2022.04.19 13:26:03 INFO  skipping build import with status 'Cancelled'
+2022.04.19 13:26:04 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+Apr 19, 2022 1:26:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Apr 19, 2022 1:26:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2022.04.19 13:26:07 INFO  no build target found for /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala. Using presentation compiler with project's scala-library version: 3.1.1
+2022.04.19 13:26:09 INFO  time: code lens generation in 4.5s
+2022.04.19 13:26:11 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/IFU.scala
+Apr 19, 2022 1:26:15 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.04.19 13:26:22 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals1428236984674063257/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:26:24 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:26:25 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:26:26 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:26:27 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:26:27 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:26:42 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/build.sbt
+2022.04.19 13:26:50 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/build.sbt
+2022.04.19 13:26:50 INFO  skipping build import with status 'Started'
+2022.04.19 13:26:57 WARN  no build target for: /home/dy/ysyx-daiyao/spinalhdl_nemu/helloworld.scala
+2022.04.19 13:27:16 WARN  Build server is not auto-connectable.
+Apr 19, 2022 1:27:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 40
+2022.04.19 13:28:01 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals15022774835272717711/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:28:03 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:28:04 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:28:05 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:28:06 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:28:06 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:28:07 ERROR [info] waiting for lock on /home/dy/.ivy2/exclude_classifiers.lock to be available...
+2022.04.19 13:28:27 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:28:27 INFO  [success] Total time: 120 s (02:00), completed Apr 19, 2022, 1:28:27 PM
+2022.04.19 13:28:27 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:28:27 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:28:43 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:28:43 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:28:43 INFO  [success] Total time: 15 s, completed Apr 19, 2022, 1:28:43 PM
+2022.04.19 13:28:43 INFO  time: ran 'sbt bloopInstall' in 2m21s
+2022.04.19 13:28:43 INFO  Attempting to connect to the build server...
+2022.04.19 13:28:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:29:08 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:29:08 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:29:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:29:08 INFO  Attempting to connect to the build server...
+2022.04.19 13:29:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:29:28 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:29:28 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:29:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:29:48 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:29:48 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:29:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:08 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:30:08 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:30:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:28 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:30:28 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:30:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:42 INFO  Attempting to connect to the build server...
+2022.04.19 13:30:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:42 INFO  Attempting to connect to the build server...
+2022.04.19 13:30:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:47 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals179657349080328126/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:30:48 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:30:48 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:30:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:30:49 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:30:50 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:30:51 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:30:53 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:30:53 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:30:53 ERROR [info] waiting for lock on /home/dy/.ivy2/exclude_classifiers.lock to be available...
+2022.04.19 13:31:02 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:02 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:03 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:31:03 INFO  [success] Total time: 177 s (02:57), completed Apr 19, 2022, 1:31:03 PM
+2022.04.19 13:31:03 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:31:04 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:31:06 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:31:06 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:31:06 INFO  [success] Total time: 1 s, completed Apr 19, 2022, 1:31:06 PM
+2022.04.19 13:31:06 INFO  time: ran 'sbt bloopInstall' in 3m5s
+2022.04.19 13:31:06 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:06 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:07 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:31:07 INFO  [success] Total time: 14 s, completed Apr 19, 2022, 1:31:07 PM
+2022.04.19 13:31:07 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:31:07 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:31:08 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:31:08 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:31:08 INFO  [success] Total time: 0 s, completed Apr 19, 2022, 1:31:08 PM
+2022.04.19 13:31:08 INFO  time: ran 'sbt bloopInstall' in 21s
+2022.04.19 13:31:08 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:08 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:08 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:434)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:344)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:31:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:08 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:22 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:22 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:26 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:26 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:28 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals13981492819131379349/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:31:28 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:28 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:30 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:31:32 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:31:33 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:31:34 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:31:34 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:31:37 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:31:37 INFO  [success] Total time: 3 s, completed Apr 19, 2022, 1:31:37 PM
+2022.04.19 13:31:37 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:31:37 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:31:38 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:31:38 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:31:38 INFO  [success] Total time: 0 s, completed Apr 19, 2022, 1:31:38 PM
+2022.04.19 13:31:38 INFO  time: ran 'sbt bloopInstall' in 10s
+2022.04.19 13:31:38 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:38 INFO  Attempting to connect to the build server...
+2022.04.19 13:31:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:42 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:42 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:46 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:46 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:48 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:48 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:31:58 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:31:58 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:31:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:02 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:02 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:06 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:06 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:08 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:08 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:08 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:18 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:18 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:22 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:22 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:26 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:26 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:28 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:28 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:28 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:38 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:38 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:42 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:42 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:434)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:344)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:32:46 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:46 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:46 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:48 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:48 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:32:58 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:32:58 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:32:59 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:33:06 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:33:06 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:434)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:344)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:33:09 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:33:09 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:434)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:344)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:33:19 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:33:19 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:33:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:33:39 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:33:39 ERROR Failed to connect with build server, no functionality will work.
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1956)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2091)
+	at scala.meta.internal.metals.BuildServerConnection$.initialize(BuildServerConnection.scala:434)
+	at scala.meta.internal.metals.BuildServerConnection$.$anonfun$fromSockets$1(BuildServerConnection.scala:344)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:34:03 INFO  compilation cancelled
+2022.04.19 13:35:01 INFO  
+2022.04.19 13:35:01 INFO  Template applied in /home/dy/./vscala
+2022.04.19 13:35:01 INFO  
+2022.04.19 13:35:01 INFO  time: ran 'giter8.Giter8' in 6.1s
+Apr 19, 2022 1:38:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.04.19 13:42:59 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals15800287370183542565/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:43:02 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:43:03 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:43:04 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:43:05 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:43:05 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:43:08 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:43:08 INFO  [success] Total time: 3 s, completed Apr 19, 2022, 1:43:08 PM
+2022.04.19 13:43:08 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:43:08 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:43:08 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:43:08 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:43:08 INFO  [success] Total time: 0 s, completed Apr 19, 2022, 1:43:09 PM
+2022.04.19 13:43:09 INFO  time: ran 'sbt bloopInstall' in 10s
+2022.04.19 13:43:09 INFO  Attempting to connect to the build server...
+2022.04.19 13:43:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:43:09 INFO  Attempting to connect to the build server...
+2022.04.19 13:43:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:43:30 ERROR Timeout waiting for 'build/initialize' response
+2022.04.19 13:43:30 WARN  Retrying connection to the build server Bloop
+2022.04.19 13:43:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:43:39 INFO  time: Connected to build server in 29s
+2022.04.19 13:43:39 INFO  Connected to Build server: Bloop v1.4.13-50-8332ee9c
+2022.04.19 13:43:39 INFO  time: Imported build in 0.16s
+2022.04.19 13:44:51 INFO  running '/usr/lib/jvm/java-16-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals11425293690189678576/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.04.19 13:44:53 INFO  [info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+2022.04.19 13:44:55 INFO  [info] loading settings for project spinalhdl_nemu-build-build from metals.sbt ...
+2022.04.19 13:44:56 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project/project
+2022.04.19 13:44:57 INFO  [info] loading settings for project spinalhdl_nemu-build from metals.sbt ...
+2022.04.19 13:44:57 INFO  [info] loading project definition from /home/dy/ysyx-daiyao/spinalhdl_nemu/project
+2022.04.19 13:45:00 INFO  [success] Generated .bloop/spinalhdl_nemu-build.json
+2022.04.19 13:45:00 INFO  [success] Total time: 3 s, completed Apr 19, 2022, 1:45:00 PM
+2022.04.19 13:45:00 INFO  [info] loading settings for project spinalhdl_nemu from build.sbt ...
+2022.04.19 13:45:00 INFO  [info] set current project to spinal_yolo_dev (in build file:/home/dy/ysyx-daiyao/spinalhdl_nemu/)
+2022.04.19 13:45:01 INFO  [success] Generated .bloop/spinalhdl_nemu.json
+2022.04.19 13:45:01 INFO  [success] Generated .bloop/spinalhdl_nemu-test.json
+2022.04.19 13:45:01 INFO  [success] Total time: 0 s, completed Apr 19, 2022, 1:45:01 PM
+2022.04.19 13:45:02 INFO  time: ran 'sbt bloopInstall' in 10s
+2022.04.19 13:45:02 INFO  Disconnecting from Bloop session...
+2022.04.19 13:45:02 INFO  Shut down connection with build server.
+2022.04.19 13:45:02 INFO  Shut down connection with build server.
+2022.04.19 13:45:02 INFO  Attempting to connect to the build server...
+2022.04.19 13:45:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/dy/ysyx-daiyao/spinalhdl_nemu/.metals/bsp.trace.json or /home/dy/.cache/metals/bsp.trace.json
+2022.04.19 13:45:02 INFO  Attempting to connect to the build server...
+2022.04.19 13:45:02 INFO  tracing is enabled: /home/dy/ysyx-daiyao/spinalhdl_nemu/project/.metals/bsp.trace.json
+2022.04.19 13:45:02 INFO  time: Connected to build server in 0.1s
+2022.04.19 13:45:02 INFO  Connected to Build server: Bloop v1.4.13-50-8332ee9c
+Apr 19, 2022 1:50:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 82
+2022.04.19 13:50:19 INFO  shutting down Metals
+2022.04.19 13:50:19 INFO  Shut down connection with build server.
+2022.04.19 13:50:19 INFO  Shut down connection with build server.
+Apr 19, 2022 1:50:23 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 16, active threads = 14, queued tasks = 0, completed tasks = 1712]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2057)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:827)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1357)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 13, active threads = 11, queued tasks = 0, completed tasks = 1715]
+java.util.concurrent.CompletionException: java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 13, active threads = 11, queued tasks = 0, completed tasks = 1715]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2158)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:29)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:26)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at scala.concurrent.ExecutionContext$parasitic$.execute(ExecutionContext.scala:222)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:435)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:335)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 13, active threads = 11, queued tasks = 0, completed tasks = 1715]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2057)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:827)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1357)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	... 39 more
+
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 11, active threads = 11, queued tasks = 0, completed tasks = 1715]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2057)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:827)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1357)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 7, active threads = 7, queued tasks = 0, completed tasks = 1719]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2057)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:827)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1357)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+Apr 19, 2022 1:50:23 PM org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer fireStreamClosed
+INFO: The input stream was closed.
+java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.SourceChannelImpl.endRead(SourceChannelImpl.java:263)
+	at java.base/sun.nio.ch.SourceChannelImpl.read(SourceChannelImpl.java:285)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:59)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:107)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:101)
+	at java.base/java.io.InputStream.read(InputStream.java:218)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:81)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:79)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+2022.04.19 13:50:23 INFO  time: code lens generation in 4.48s
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@2c6f809f[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 1725]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2057)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:827)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1357)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:504)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)

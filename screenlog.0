@@ -1,0 +1,24 @@
+[2022-04-17 10:58:05:763 INFO] Running AutoCompaction...
+stop
+[2022-04-17 10:58:45:183 INFO] Server stop requested.
+[2022-04-17 10:58:45:196 INFO] Stopping server...
+Quit correctly
+(base) [01;32mdy@VM-16-2-ubuntu[00m:[01;34m~/MC[00m$ LD_LIBRARY_PATH=. ./bedrock_server[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KLD_LIBRARY_PATH=. ./bedrock_server[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kls
+allowlist.json                 [0m[01;32mbedrock_server_symbols.debug[0m  [01;34mdevelopment_behavior_packs[0m  permissions.json   server.properties       [01;34mworlds[0m
+[01;32mbedrock_server[0m                 [01;34mbehavior_packs[0m                [01;34mdevelopment_resource_packs[0m  [01;34mpremium_cache[0m      [01;34mstructures[0m              [01;34mworld_templates[0m
+[01;32mbedrock-server-1.18.12.01.zip[0m  Dedicated_Server.txt          [01;34mdevelopment_skin_packs[0m      release-notes.txt  [01;34mtreatments[0m
+bedrock_server_how_to.html     [01;34mdefinitions[0m                   [01;34mminecraftpe[0m                 [01;34mresource_packs[0m     valid_known_packs.json
+(base) [01;32mdy@VM-16-2-ubuntu[00m:[01;34m~/MC[00m$ cd [K[K[KlsLD_LIBRARY_PATH=. ./bedrock_server
+NO LOG FILE! - setting up server logging...
+[2022-04-17 10:58:58:123 INFO] Starting Server
+[2022-04-17 10:58:58:123 INFO] Version 1.18.12.01
+[2022-04-17 10:58:58:123 INFO] Session ID 037bc0c9-21ad-468a-a477-dcaba56c897d
+[2022-04-17 10:58:58:123 INFO] Level Name: Bedrock level
+[2022-04-17 10:58:58:124 INFO] Game mode: 0 Survival
+[2022-04-17 10:58:58:124 INFO] Difficulty: 1 EASY
+[2022-04-17 10:58:58:151 INFO] opening worlds/Bedrock level/db
+[2022-04-17 10:58:58:571 INFO] IPv4 supported, port: 19132
+[2022-04-17 10:58:58:571 INFO] IPv6 supported, port: 19133
+[2022-04-17 10:58:59:773 INFO] Server started.
+[2022-04-17 10:58:59:810 INFO] IPv4 supported, port: 52314
+[2022-04-17 10:58:59:810 INFO] IPv6 supported, port: 36922

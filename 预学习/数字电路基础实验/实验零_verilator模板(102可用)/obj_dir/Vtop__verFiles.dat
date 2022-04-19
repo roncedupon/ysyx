@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "-Wall --cc --exe --build sim_main.cpp top.v"
+S   9700832   156340  1649339245   223730080  1649339245   223730080 "/usr/local/bin/verilator_bin"
+T      5120   785338  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop.cpp"
+T      2883   785339  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop.h"
+T      1769   785340  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop.mk"
+T      2098   785342  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop__Slow.cpp"
+T       529   785343  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop__Syms.cpp"
+T       767   785344  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop__Syms.h"
+T       227   782049  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop__ver.d"
+T         0        0  1650017228   866300364  1650017228   866300364 "obj_dir/Vtop__verFiles.dat"
+T      1580   785347  1650017228   862300382  1650017228   862300382 "obj_dir/Vtop_classes.mk"
+S      1424   785348  1649868125   643875334  1648623821   372667315 "top.v"

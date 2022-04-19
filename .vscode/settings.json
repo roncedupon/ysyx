@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "isa-def.h": "c",
+        "decode.h": "c",
+        "locale.h": "c",
+        "regex.h": "c",
+        "sdb.h": "c",
+        "cpu.h": "c",
+        "memory.h": "c",
+        "common.h": "c",
+        "*.tcc": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "type_traits": "c",
+        "cstring": "c",
+        "typeinfo": "c"
+    },
+    "files.exclude": {
+        "**/.git": true
+},
+"files.watcherExclude": {
+    "**/target": true
+},
+
+}

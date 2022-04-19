@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0m/home/dy/ysyx-daiyao/spinalhdl_nemu/src/main/scala/nemu/vcodegen.scala:12:67: missing argument list for method + in class String[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `$plus _` or `$plus(_)` instead of `$plus`.[0m
+[0m[[0m[31merror[0m] [0m[0m        println("(def funct7Range = 31 downto 25) is "+funct7Range+)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -1,0 +1,53 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+[debug] Load.defaultLoad until apply took 7935.653716ms
+[debug]                 Load.loadUnit: plugins took 1606.725956ms
+[debug]                 Load.loadUnit: defsScala took 0.24593ms
+[debug] [Loading] Scanning directory /home/dy/ysyx-daiyao/project/project
+[debug]                   Load.loadUnit: mkEval took 250.838067ms
+[warn] In the last 102 seconds, 19.787 (19.5%) were spent in GC. [Heap: 0.03GB free of 0.08GB, max 0.96GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 632 seconds, 6.877 (1.1%) were spent in GC. [Heap: 0.03GB free of 0.08GB, max 0.96GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 482 seconds, 47.687 (9.9%) were spent in GC. [Heap: 0.03GB free of 0.08GB, max 0.96GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 296.193374 ms
+[info] loading settings for project ysyx-daiyao-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(ysyx-daiyao-build-build) took 878.280485ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id ysyx-daiyao-build-build, base: /home/dy/ysyx-daiyao/project/project, plugins: List(<none>))) took 1339.456807ms
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/project/project, returning: (ysyx-daiyao-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 2797678.749768ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 140.168793ms
+[debug]               Load.loadUnit(file:/home/dy/ysyx-daiyao/project/project/, ...) took 2799485.698363ms
+[debug]             Load.apply: load took 2802180.884855ms
+[debug]             Load.apply: resolveProjects took 72.314052ms
+[debug]             Load.apply: finalTransforms took 1226.460119ms
+[debug]             Load.apply: config.delegates took 134.162929ms
+[debug]             Load.apply: Def.make(settings)... took 6320.541156ms
+[debug]             Load.apply: structureIndex took 1432.577388ms
+[debug]             Load.apply: mkStreams took 1.71621ms
+[info] loading project definition from /home/dy/ysyx-daiyao/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] In the last 339 seconds, 15.886 (4.7%) were spent in GC. [Heap: 0.07GB free of 0.12GB, max 0.96GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[warn] In the last 641 seconds, 26.383 (4.1%) were spent in GC. [Heap: 0.08GB free of 0.14GB, max 0.96GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.

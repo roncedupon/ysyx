@@ -1,0 +1,49 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[info] Updated file /home/dy/ysyx-daiyao/project/build.properties: set sbt.version to 1.6.2
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Private Build Java 16.0.1)
+[debug] Load.defaultLoad until apply took 2536.624104ms
+[debug]                 Load.loadUnit: plugins took 1194.283375ms
+[debug]                 Load.loadUnit: defsScala took 0.273081ms
+[debug] [Loading] Scanning directory /home/dy/ysyx-daiyao/project/project
+[debug]                   Load.loadUnit: mkEval took 101.504644ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 274.053219 ms
+[info] loading settings for project ysyx-daiyao-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(ysyx-daiyao-build-build) took 908.653996ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id ysyx-daiyao-build-build, base: /home/dy/ysyx-daiyao/project/project, plugins: List(<none>))) took 1329.026939ms
+[debug] [Loading] Done in /home/dy/ysyx-daiyao/project/project, returning: (ysyx-daiyao-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 47550.357382ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 112.363143ms
+[debug]               Load.loadUnit(file:/home/dy/ysyx-daiyao/project/project/, ...) took 48967.530337ms
+[debug]             Load.apply: load took 50949.1571ms
+[debug]             Load.apply: resolveProjects took 108.343726ms
+[debug]             Load.apply: finalTransforms took 1093.609525ms
+[debug]             Load.apply: config.delegates took 143.122146ms
+[debug]             Load.apply: Def.make(settings)... took 1276444.651537ms
+[debug]             Load.apply: structureIndex took 2266.775118ms
+[debug]             Load.apply: mkStreams took 1.399869ms
+[info] loading project definition from /home/dy/ysyx-daiyao/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
