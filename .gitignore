@@ -7,6 +7,8 @@
 !/nanos-lite/*
 !/navy-apps/*
 !/npc/*
+!/预学习/*
+!/spinalhdl_nemu/*
 !Makefile
 !README.md
 !.gitignore
