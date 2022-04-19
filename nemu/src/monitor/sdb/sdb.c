@@ -156,7 +156,7 @@ static int cmd_help(char *args) {
   return 0;
 }
 
-void sdb_set_batch_mode() {
+void sdb_set_batch_mode() {//批处理模式,就是不等用户输入直接run
   is_batch_mode = true;
 }
 

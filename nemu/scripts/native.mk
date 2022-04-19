@@ -14,17 +14,22 @@ override ARGS += $(ARGS_DIFF)
 
 # Command to execute NEMU
 IMG ?=
+#“？=”表示如果该变量没有被赋值，则赋予等号后的值
 NEMU_EXEC := $(BINARY) $(ARGS) $(IMG)
-
+NENU_EXEC_BATCH := $(BINARY)
 run-env: $(BINARY) $(DIFF_REF_SO)
-
+	echo $(BINARY) 
+	
 run: run-env
 	$(call git_commit, "run NEMU")
 	$(NEMU_EXEC)
+run_batch: 
+	$(NEMU_EXEC) -b
 
 gdb: run-env
 	$(call git_commit, "gdb NEMU")
 	gdb -s $(BINARY) --args $(NEMU_EXEC)
+#-s:生成汇编文件
 
 clean-tools = $(dir $(shell find ./tools -maxdepth 2 -mindepth 2 -name "Makefile"))
 $(clean-tools):
